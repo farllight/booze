@@ -41,8 +41,6 @@ class ProfileVC: UIViewController {
         ibProfileTableView.isScrollEnabled = false
         ibProfileTableView.register(UINib(nibName: ProfileTableViewCell.xibName, bundle: nil),
                                     forCellReuseIdentifier: ProfileTableViewCell.reuseId)
-        ibProfileTableView.register(UINib(nibName: ProfileAvatarTableViewCell.xibName, bundle: nil),
-                                    forCellReuseIdentifier: ProfileAvatarTableViewCell.reuseId)
     }
     
     private func setupRemindButton() {

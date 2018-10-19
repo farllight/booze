@@ -24,8 +24,6 @@
 		76EC97AE217A766B00A50261 /* UIViewController+CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC97AD217A766B00A50261 /* UIViewController+CustomNavigationBar.swift */; };
 		76EC97B2217A7ABF00A50261 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC97B0217A7ABF00A50261 /* ProfileTableViewCell.swift */; };
 		76EC97B3217A7ABF00A50261 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76EC97B1217A7ABF00A50261 /* ProfileTableViewCell.xib */; };
-		76EC97BB217A811F00A50261 /* ProfileAvatarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC97B9217A811F00A50261 /* ProfileAvatarTableViewCell.swift */; };
-		76EC97BC217A811F00A50261 /* ProfileAvatarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76EC97BA217A811F00A50261 /* ProfileAvatarTableViewCell.xib */; };
 		76EC97BF217A82E700A50261 /* UIImageView+CustomRoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC97BE217A82E700A50261 /* UIImageView+CustomRoundImageView.swift */; };
 		76EC97C1217A8B0200A50261 /* ProfileTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC97C0217A8B0200A50261 /* ProfileTableViewCellModel.swift */; };
 		D3D371471BB20568914C2B2C /* Pods_booze_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF989F2650E439AD419CAA6 /* Pods_booze_ios.framework */; };
@@ -51,8 +49,6 @@
 		76EC97AD217A766B00A50261 /* UIViewController+CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CustomNavigationBar.swift"; sourceTree = "<group>"; };
 		76EC97B0217A7ABF00A50261 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		76EC97B1217A7ABF00A50261 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
-		76EC97B9217A811F00A50261 /* ProfileAvatarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAvatarTableViewCell.swift; sourceTree = "<group>"; };
-		76EC97BA217A811F00A50261 /* ProfileAvatarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileAvatarTableViewCell.xib; sourceTree = "<group>"; };
 		76EC97BE217A82E700A50261 /* UIImageView+CustomRoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+CustomRoundImageView.swift"; sourceTree = "<group>"; };
 		76EC97C0217A8B0200A50261 /* ProfileTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCellModel.swift; sourceTree = "<group>"; };
 		AD13D1649537914FD1B1416E /* Pods-booze-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,7 +142,6 @@
 		76EC9790217A4FCD00A50261 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				76EC97BD217A813500A50261 /* ProfileAvatarTableViewCell */,
 				76EC97AF217A7A9E00A50261 /* ProfileTableViewCell */,
 				76EC9798217A552C00A50261 /* Profile.storyboard */,
 				76EC979A217A554E00A50261 /* ProfileVC.swift */,
@@ -205,15 +200,6 @@
 				76EC97B1217A7ABF00A50261 /* ProfileTableViewCell.xib */,
 			);
 			path = ProfileTableViewCell;
-			sourceTree = "<group>";
-		};
-		76EC97BD217A813500A50261 /* ProfileAvatarTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				76EC97B9217A811F00A50261 /* ProfileAvatarTableViewCell.swift */,
-				76EC97BA217A811F00A50261 /* ProfileAvatarTableViewCell.xib */,
-			);
-			path = ProfileAvatarTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +266,6 @@
 				76EC9782217A4CB700A50261 /* Assets.xcassets in Resources */,
 				76EC9799217A552C00A50261 /* Profile.storyboard in Resources */,
 				76EC9792217A51EC00A50261 /* Boozies.storyboard in Resources */,
-				76EC97BC217A811F00A50261 /* ProfileAvatarTableViewCell.xib in Resources */,
 				76EC97A2217A5DC600A50261 /* BooziesTableViewCell.xib in Resources */,
 				76EC97B3217A7ABF00A50261 /* ProfileTableViewCell.xib in Resources */,
 			);
@@ -344,7 +329,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76EC97BB217A811F00A50261 /* ProfileAvatarTableViewCell.swift in Sources */,
 				76EC979B217A554E00A50261 /* ProfileVC.swift in Sources */,
 				76EC97BF217A82E700A50261 /* UIImageView+CustomRoundImageView.swift in Sources */,
 				76EC979D217A5CB500A50261 /* ColorResources.swift in Sources */,
