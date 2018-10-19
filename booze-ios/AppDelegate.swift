@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window?.makeKeyAndVisible()
-        window?.rootViewController = MainTabBarController()
+        window?.rootViewController = AuthVC.storyboardInstance()
                 
         return true
     }

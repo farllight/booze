@@ -9,16 +9,72 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AuthVC-->
         <scene sceneID="8AJ-cH-stn">
             <objects>
-                <viewController id="Xgl-4j-JnX" sceneMemberID="viewController">
+                <viewController id="Xgl-4j-JnX" customClass="AuthVC" customModule="booze_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d2D-N8-sY1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телефон" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfT-8v-kVH">
+                                <rect key="frame" x="128.5" y="84" width="118" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите Ваш номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUs-Go-bDB">
+                                <rect key="frame" x="66.5" y="124" width="242" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Номер телефона" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lT5-52-A9a">
+                                <rect key="frame" x="16" y="185" width="343" height="17"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ejf-eG-dNj">
+                                <rect key="frame" x="16" y="206" width="343" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="8Ie-Tl-7zR"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfG-ug-eLf">
+                                <rect key="frame" x="135.5" y="287" width="104" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="ПОДВЕРДИТЬ"/>
+                                <connections>
+                                    <action selector="sendCodeButtonTouched:" destination="Xgl-4j-JnX" eventType="touchUpInside" id="2Qa-7T-QoM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fec-R0-C5O" firstAttribute="trailing" secondItem="Ejf-eG-dNj" secondAttribute="trailing" constant="16" id="4Hk-gg-sCo"/>
+                            <constraint firstItem="dfG-ug-eLf" firstAttribute="centerX" secondItem="d2D-N8-sY1" secondAttribute="centerX" id="4gC-p8-OKx"/>
+                            <constraint firstItem="lT5-52-A9a" firstAttribute="top" secondItem="xUs-Go-bDB" secondAttribute="bottom" constant="40" id="AJU-2j-cIu"/>
+                            <constraint firstItem="sfT-8v-kVH" firstAttribute="centerX" secondItem="d2D-N8-sY1" secondAttribute="centerX" id="DyR-zs-8TJ"/>
+                            <constraint firstItem="lT5-52-A9a" firstAttribute="leading" secondItem="Fec-R0-C5O" secondAttribute="leading" constant="16" id="Evs-o0-qHb"/>
+                            <constraint firstItem="Fec-R0-C5O" firstAttribute="trailing" secondItem="lT5-52-A9a" secondAttribute="trailing" constant="16" id="GeZ-UZ-ADk"/>
+                            <constraint firstItem="xUs-Go-bDB" firstAttribute="centerX" secondItem="d2D-N8-sY1" secondAttribute="centerX" id="Rp7-5j-aV9"/>
+                            <constraint firstItem="xUs-Go-bDB" firstAttribute="top" secondItem="sfT-8v-kVH" secondAttribute="bottom" constant="4" id="Zl3-Uu-WLM"/>
+                            <constraint firstItem="Ejf-eG-dNj" firstAttribute="top" secondItem="lT5-52-A9a" secondAttribute="bottom" constant="4" id="alZ-Wq-cJD"/>
+                            <constraint firstItem="dfG-ug-eLf" firstAttribute="top" secondItem="Ejf-eG-dNj" secondAttribute="bottom" constant="80" id="dut-uf-dO9"/>
+                            <constraint firstItem="sfT-8v-kVH" firstAttribute="top" secondItem="Fec-R0-C5O" secondAttribute="top" constant="64" id="mgS-Cs-3yA"/>
+                            <constraint firstItem="Ejf-eG-dNj" firstAttribute="leading" secondItem="Fec-R0-C5O" secondAttribute="leading" constant="16" id="rxB-r8-p2j"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Fec-R0-C5O"/>
                     </view>
+                    <connections>
+                        <outlet property="ibDescriptionLabel" destination="xUs-Go-bDB" id="q2I-nI-YXO"/>
+                        <outlet property="ibPhoneTextField" destination="lT5-52-A9a" id="wIU-QJ-gDt"/>
+                        <outlet property="ibPhoneTitleLabel" destination="sfT-8v-kVH" id="w5O-wV-57w"/>
+                        <outlet property="ibSendCodeButton" destination="dfG-ug-eLf" id="8W1-MP-lwk"/>
+                        <outlet property="ibSepatorView" destination="Ejf-eG-dNj" id="n9X-Fc-lM6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXy-T1-PhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

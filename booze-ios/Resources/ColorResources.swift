@@ -12,8 +12,7 @@ class ColorResources {
     static let shared = ColorResources()
     
     let mainThemeColor = UIColor(hex: "#FF186D6C")
-    let green = UIColor(red: 0, green: 150, blue: 136, alpha: 1)
-    
+    let authTextFieldColor = UIColor(hex: "#80FFFFFF")
     
     private init() {
         
