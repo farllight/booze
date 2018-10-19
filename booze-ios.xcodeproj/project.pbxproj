@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		1F7D2D70714895E6C1919BE4 /* Pods_booze_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A239449180396B5C432338B6 /* Pods_booze_ios.framework */; };
 		76EC977B217A4CB600A50261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC977A217A4CB600A50261 /* AppDelegate.swift */; };
-		76EC977D217A4CB600A50261 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC977C217A4CB600A50261 /* ViewController.swift */; };
-		76EC9780217A4CB600A50261 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC977E217A4CB600A50261 /* Main.storyboard */; };
 		76EC9782217A4CB700A50261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9781217A4CB700A50261 /* Assets.xcassets */; };
 		76EC9785217A4CB700A50261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9783217A4CB700A50261 /* LaunchScreen.storyboard */; };
+		76EC978E217A4EBA00A50261 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC978D217A4EBA00A50261 /* MainTabBarController.swift */; };
+		76EC9792217A51EC00A50261 /* Boozies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9791217A51EC00A50261 /* Boozies.storyboard */; };
+		76EC9794217A521300A50261 /* BooziesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC9793217A521300A50261 /* BooziesVC.swift */; };
+		76EC9797217A54B900A50261 /* ImageResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC9796217A54B900A50261 /* ImageResources.swift */; };
+		76EC9799217A552C00A50261 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9798217A552C00A50261 /* Profile.storyboard */; };
+		76EC979B217A554E00A50261 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC979A217A554E00A50261 /* ProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +24,15 @@
 		6C61A5EEB1AA6ED9DC4F1EE2 /* Pods-booze-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		76EC9777217A4CB600A50261 /* booze-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "booze-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EC977A217A4CB600A50261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		76EC977C217A4CB600A50261 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		76EC977F217A4CB600A50261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76EC9781217A4CB700A50261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76EC9784217A4CB700A50261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76EC9786217A4CB700A50261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76EC978D217A4EBA00A50261 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		76EC9791217A51EC00A50261 /* Boozies.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Boozies.storyboard; sourceTree = "<group>"; };
+		76EC9793217A521300A50261 /* BooziesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooziesVC.swift; sourceTree = "<group>"; };
+		76EC9796217A54B900A50261 /* ImageResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResources.swift; sourceTree = "<group>"; };
+		76EC9798217A552C00A50261 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		76EC979A217A554E00A50261 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		A239449180396B5C432338B6 /* Pods_booze_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_booze_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -62,13 +70,49 @@
 			isa = PBXGroup;
 			children = (
 				76EC977A217A4CB600A50261 /* AppDelegate.swift */,
-				76EC977C217A4CB600A50261 /* ViewController.swift */,
-				76EC977E217A4CB600A50261 /* Main.storyboard */,
 				76EC9781217A4CB700A50261 /* Assets.xcassets */,
 				76EC9783217A4CB700A50261 /* LaunchScreen.storyboard */,
 				76EC9786217A4CB700A50261 /* Info.plist */,
+				76EC9795217A54A300A50261 /* Resources */,
+				76EC978C217A4E8600A50261 /* App Sequence */,
 			);
 			path = "booze-ios";
+			sourceTree = "<group>";
+		};
+		76EC978C217A4E8600A50261 /* App Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				76EC9790217A4FCD00A50261 /* Profile */,
+				76EC978F217A4FC700A50261 /* Boozies */,
+				76EC978D217A4EBA00A50261 /* MainTabBarController.swift */,
+			);
+			path = "App Sequence";
+			sourceTree = "<group>";
+		};
+		76EC978F217A4FC700A50261 /* Boozies */ = {
+			isa = PBXGroup;
+			children = (
+				76EC9791217A51EC00A50261 /* Boozies.storyboard */,
+				76EC9793217A521300A50261 /* BooziesVC.swift */,
+			);
+			path = Boozies;
+			sourceTree = "<group>";
+		};
+		76EC9790217A4FCD00A50261 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				76EC9798217A552C00A50261 /* Profile.storyboard */,
+				76EC979A217A554E00A50261 /* ProfileVC.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		76EC9795217A54A300A50261 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				76EC9796217A54B900A50261 /* ImageResources.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9572B2909DA38C4A48B7697D /* Frameworks */ = {
@@ -149,7 +193,8 @@
 			files = (
 				76EC9785217A4CB700A50261 /* LaunchScreen.storyboard in Resources */,
 				76EC9782217A4CB700A50261 /* Assets.xcassets in Resources */,
-				76EC9780217A4CB600A50261 /* Main.storyboard in Resources */,
+				76EC9799217A552C00A50261 /* Profile.storyboard in Resources */,
+				76EC9792217A51EC00A50261 /* Boozies.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76EC977D217A4CB600A50261 /* ViewController.swift in Sources */,
+				76EC979B217A554E00A50261 /* ProfileVC.swift in Sources */,
+				76EC9794217A521300A50261 /* BooziesVC.swift in Sources */,
+				76EC9797217A54B900A50261 /* ImageResources.swift in Sources */,
+				76EC978E217A4EBA00A50261 /* MainTabBarController.swift in Sources */,
 				76EC977B217A4CB600A50261 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,14 +241,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		76EC977E217A4CB600A50261 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76EC977F217A4CB600A50261 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		76EC9783217A4CB700A50261 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
