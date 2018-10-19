@@ -30,12 +30,13 @@ class BooziesVC: UIViewController {
         ibBooziesTableView.dataSource = self
         ibBooziesTableView.register(UINib(nibName: BooziesTableViewCell.xibName, bundle: nil),
                                     forCellReuseIdentifier: BooziesTableViewCell.reuseId)
+        ibBooziesTableView.tableFooterView = UIView()
     }
 }
 
 extension BooziesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
