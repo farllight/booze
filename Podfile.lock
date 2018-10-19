@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (4.7.3)
+  - Eureka (4.3.0)
 
 DEPENDENCIES:
   - Alamofire
+  - Eureka
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Eureka
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Eureka: 6d711cb30ca333b4bc893110285a722ae3840114
 
-PODFILE CHECKSUM: f3a44050405a3ac12aa9d3e430f445d703dcbab9
+PODFILE CHECKSUM: 7c74ac8afac8e2d5cd4117b149aef8cfab973012
 
 COCOAPODS: 1.5.3

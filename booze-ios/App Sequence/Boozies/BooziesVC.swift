@@ -11,6 +11,8 @@ import UIKit
 class BooziesVC: UIViewController {
     @IBOutlet weak var ibBooziesTableView: UITableView!
     
+    private var addRightBarButtonItem = UIBarButtonItem()
+    
     // MARK: - Initialize
     static func storyboardInstance() -> UIViewController {
         let sb = UIStoryboard(name: "Boozies", bundle: nil)
@@ -21,16 +23,35 @@ class BooziesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
     }
 
     // MARK: - Setup UI
     private func setupUI() {
         title = "Пьянки"
+        setupBooziesTableView()
+        setupRightBarButtonItem()
+        setupNavigationBar()
+    }
+    
+    private func setupRightBarButtonItem() {
+        addRightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+                                                target: self,
+                                                action: #selector(addRightBarButtonItemTouched))
+        navigationItem.rightBarButtonItem = addRightBarButtonItem
+    }
+    
+    private func setupBooziesTableView() {
         ibBooziesTableView.delegate = self
         ibBooziesTableView.dataSource = self
         ibBooziesTableView.register(UINib(nibName: BooziesTableViewCell.xibName, bundle: nil),
                                     forCellReuseIdentifier: BooziesTableViewCell.reuseId)
         ibBooziesTableView.tableFooterView = UIView()
+    }
+    
+    // MARK: - Actions
+    @objc private func addRightBarButtonItemTouched() {
+        navigationController?.pushViewController(AddBoozeVC(), animated: true)
     }
 }
 

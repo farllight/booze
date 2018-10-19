@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.rootViewController = MainTabBarController()
         
+//        UINavigationBar.appearance().backgroundColor = ColorResources.shared.purple
+//        UINavigationBar.appearance().tintColor = .white
+        
         return true
     }
 }

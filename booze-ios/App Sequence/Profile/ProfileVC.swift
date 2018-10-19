@@ -24,5 +24,6 @@ class ProfileVC: UIViewController {
     // MARK: - Setup UI
     private func setupUI() {
         title = "Профиль"
+        setupNavigationBar()
     }
 }
