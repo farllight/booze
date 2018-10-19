@@ -15,10 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window?.makeKeyAndVisible()
         window?.rootViewController = MainTabBarController()
-        
-//        UINavigationBar.appearance().backgroundColor = ColorResources.shared.purple
-//        UINavigationBar.appearance().tintColor = .white
-        
+                
         return true
     }
 }

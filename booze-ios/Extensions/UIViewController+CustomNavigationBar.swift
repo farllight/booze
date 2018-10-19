@@ -12,7 +12,7 @@ import Foundation
 extension UIViewController {
     func setupNavigationBar() {
         navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.barTintColor = ColorResources.shared.purple
+        navigationController?.navigationBar.barTintColor = ColorResources.shared.mainThemeColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
 }

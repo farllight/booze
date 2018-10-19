@@ -11,8 +11,9 @@ import UIKit
 class ColorResources {
     static let shared = ColorResources()
     
-    let purple = UIColor(red: 0.42, green: 0, blue: 0.86, alpha: 1)
+    let mainThemeColor = UIColor(hex: "#FF186D6C")
     let green = UIColor(red: 0, green: 150, blue: 136, alpha: 1)
+    
     
     private init() {
         
