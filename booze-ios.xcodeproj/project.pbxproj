@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F50D8DA6DAE2CA4F2D04F32 /* Pods_booze_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCF3EB3B00E132E244657A0 /* Pods_booze_ios.framework */; };
 		76EC977B217A4CB600A50261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC977A217A4CB600A50261 /* AppDelegate.swift */; };
 		76EC9782217A4CB700A50261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9781217A4CB700A50261 /* Assets.xcassets */; };
 		76EC9785217A4CB700A50261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9783217A4CB700A50261 /* LaunchScreen.storyboard */; };
@@ -23,10 +22,16 @@
 		76EC97A6217A662C00A50261 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC97A5217A662C00A50261 /* APIClient.swift */; };
 		76EC97AB217A6B0500A50261 /* AddBoozeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC97AA217A6B0500A50261 /* AddBoozeVC.swift */; };
 		76EC97AE217A766B00A50261 /* UIViewController+CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC97AD217A766B00A50261 /* UIViewController+CustomNavigationBar.swift */; };
+		76EC97B2217A7ABF00A50261 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC97B0217A7ABF00A50261 /* ProfileTableViewCell.swift */; };
+		76EC97B3217A7ABF00A50261 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76EC97B1217A7ABF00A50261 /* ProfileTableViewCell.xib */; };
+		76EC97BB217A811F00A50261 /* ProfileAvatarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC97B9217A811F00A50261 /* ProfileAvatarTableViewCell.swift */; };
+		76EC97BC217A811F00A50261 /* ProfileAvatarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76EC97BA217A811F00A50261 /* ProfileAvatarTableViewCell.xib */; };
+		76EC97BF217A82E700A50261 /* UIImageView+CustomRoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC97BE217A82E700A50261 /* UIImageView+CustomRoundImageView.swift */; };
+		76EC97C1217A8B0200A50261 /* ProfileTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC97C0217A8B0200A50261 /* ProfileTableViewCellModel.swift */; };
+		D3D371471BB20568914C2B2C /* Pods_booze_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF989F2650E439AD419CAA6 /* Pods_booze_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0FCF3EB3B00E132E244657A0 /* Pods_booze_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_booze_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EC9777217A4CB600A50261 /* booze-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "booze-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EC977A217A4CB600A50261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76EC9781217A4CB700A50261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,8 +49,15 @@
 		76EC97A5217A662C00A50261 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		76EC97AA217A6B0500A50261 /* AddBoozeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBoozeVC.swift; sourceTree = "<group>"; };
 		76EC97AD217A766B00A50261 /* UIViewController+CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CustomNavigationBar.swift"; sourceTree = "<group>"; };
-		B33287B22067678C8FFB1992 /* Pods-booze-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		B400BEBDD6790AB2C1525219 /* Pods-booze-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.release.xcconfig"; sourceTree = "<group>"; };
+		76EC97B0217A7ABF00A50261 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		76EC97B1217A7ABF00A50261 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		76EC97B9217A811F00A50261 /* ProfileAvatarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAvatarTableViewCell.swift; sourceTree = "<group>"; };
+		76EC97BA217A811F00A50261 /* ProfileAvatarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileAvatarTableViewCell.xib; sourceTree = "<group>"; };
+		76EC97BE217A82E700A50261 /* UIImageView+CustomRoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+CustomRoundImageView.swift"; sourceTree = "<group>"; };
+		76EC97C0217A8B0200A50261 /* ProfileTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCellModel.swift; sourceTree = "<group>"; };
+		AD13D1649537914FD1B1416E /* Pods-booze-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.release.xcconfig"; sourceTree = "<group>"; };
+		B212AF6F17EA9C0625FA80FF /* Pods-booze-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		CEF989F2650E439AD419CAA6 /* Pods_booze_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_booze_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,20 +65,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F50D8DA6DAE2CA4F2D04F32 /* Pods_booze_ios.framework in Frameworks */,
+				D3D371471BB20568914C2B2C /* Pods_booze_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		54530CB62BBBDD624091432B /* Pods */ = {
+		085548EFCC010195B95AD4C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B33287B22067678C8FFB1992 /* Pods-booze-ios.debug.xcconfig */,
-				B400BEBDD6790AB2C1525219 /* Pods-booze-ios.release.xcconfig */,
+				B212AF6F17EA9C0625FA80FF /* Pods-booze-ios.debug.xcconfig */,
+				AD13D1649537914FD1B1416E /* Pods-booze-ios.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		71269DFDA23DCC9BB8039337 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEF989F2650E439AD419CAA6 /* Pods_booze_ios.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		76EC976E217A4CB500A50261 = {
@@ -74,8 +94,8 @@
 			children = (
 				76EC9779217A4CB600A50261 /* booze-ios */,
 				76EC9778217A4CB600A50261 /* Products */,
-				54530CB62BBBDD624091432B /* Pods */,
-				7C5B542F1D0A1B5C58D655E0 /* Frameworks */,
+				085548EFCC010195B95AD4C4 /* Pods */,
+				71269DFDA23DCC9BB8039337 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +146,8 @@
 		76EC9790217A4FCD00A50261 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				76EC97BD217A813500A50261 /* ProfileAvatarTableViewCell */,
+				76EC97AF217A7A9E00A50261 /* ProfileTableViewCell */,
 				76EC9798217A552C00A50261 /* Profile.storyboard */,
 				76EC979A217A554E00A50261 /* ProfileVC.swift */,
 			);
@@ -170,16 +192,28 @@
 			isa = PBXGroup;
 			children = (
 				76EC97AD217A766B00A50261 /* UIViewController+CustomNavigationBar.swift */,
+				76EC97BE217A82E700A50261 /* UIImageView+CustomRoundImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		7C5B542F1D0A1B5C58D655E0 /* Frameworks */ = {
+		76EC97AF217A7A9E00A50261 /* ProfileTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				0FCF3EB3B00E132E244657A0 /* Pods_booze_ios.framework */,
+				76EC97C0217A8B0200A50261 /* ProfileTableViewCellModel.swift */,
+				76EC97B0217A7ABF00A50261 /* ProfileTableViewCell.swift */,
+				76EC97B1217A7ABF00A50261 /* ProfileTableViewCell.xib */,
 			);
-			name = Frameworks;
+			path = ProfileTableViewCell;
+			sourceTree = "<group>";
+		};
+		76EC97BD217A813500A50261 /* ProfileAvatarTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				76EC97B9217A811F00A50261 /* ProfileAvatarTableViewCell.swift */,
+				76EC97BA217A811F00A50261 /* ProfileAvatarTableViewCell.xib */,
+			);
+			path = ProfileAvatarTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,11 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76EC9789217A4CB700A50261 /* Build configuration list for PBXNativeTarget "booze-ios" */;
 			buildPhases = (
-				669C8A61FDC280A233B7BE69 /* [CP] Check Pods Manifest.lock */,
+				72FD14F5F3F77F0D6081C451 /* [CP] Check Pods Manifest.lock */,
 				76EC9773217A4CB600A50261 /* Sources */,
 				76EC9774217A4CB600A50261 /* Frameworks */,
 				76EC9775217A4CB600A50261 /* Resources */,
-				6043E1A4D9817C4CBB60CDA8 /* [CP] Embed Pods Frameworks */,
+				41D480C67630EB2698490818 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,14 +280,16 @@
 				76EC9782217A4CB700A50261 /* Assets.xcassets in Resources */,
 				76EC9799217A552C00A50261 /* Profile.storyboard in Resources */,
 				76EC9792217A51EC00A50261 /* Boozies.storyboard in Resources */,
+				76EC97BC217A811F00A50261 /* ProfileAvatarTableViewCell.xib in Resources */,
 				76EC97A2217A5DC600A50261 /* BooziesTableViewCell.xib in Resources */,
+				76EC97B3217A7ABF00A50261 /* ProfileTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6043E1A4D9817C4CBB60CDA8 /* [CP] Embed Pods Frameworks */ = {
+		41D480C67630EB2698490818 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -264,6 +300,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/KVNProgress/KVNProgress.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -271,13 +308,14 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVNProgress.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		669C8A61FDC280A233B7BE69 /* [CP] Check Pods Manifest.lock */ = {
+		72FD14F5F3F77F0D6081C451 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -306,14 +344,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76EC97BB217A811F00A50261 /* ProfileAvatarTableViewCell.swift in Sources */,
 				76EC979B217A554E00A50261 /* ProfileVC.swift in Sources */,
+				76EC97BF217A82E700A50261 /* UIImageView+CustomRoundImageView.swift in Sources */,
 				76EC979D217A5CB500A50261 /* ColorResources.swift in Sources */,
 				76EC9794217A521300A50261 /* BooziesVC.swift in Sources */,
+				76EC97B2217A7ABF00A50261 /* ProfileTableViewCell.swift in Sources */,
 				76EC97AB217A6B0500A50261 /* AddBoozeVC.swift in Sources */,
 				76EC97A6217A662C00A50261 /* APIClient.swift in Sources */,
 				76EC97AE217A766B00A50261 /* UIViewController+CustomNavigationBar.swift in Sources */,
 				76EC9797217A54B900A50261 /* ImageResources.swift in Sources */,
 				76EC97A1217A5DC600A50261 /* BooziesTableViewCell.swift in Sources */,
+				76EC97C1217A8B0200A50261 /* ProfileTableViewCellModel.swift in Sources */,
 				76EC978E217A4EBA00A50261 /* MainTabBarController.swift in Sources */,
 				76EC977B217A4CB600A50261 /* AppDelegate.swift in Sources */,
 			);
@@ -451,7 +493,7 @@
 		};
 		76EC978A217A4CB700A50261 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B33287B22067678C8FFB1992 /* Pods-booze-ios.debug.xcconfig */;
+			baseConfigurationReference = B212AF6F17EA9C0625FA80FF /* Pods-booze-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,7 +512,7 @@
 		};
 		76EC978B217A4CB700A50261 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B400BEBDD6790AB2C1525219 /* Pods-booze-ios.release.xcconfig */;
+			baseConfigurationReference = AD13D1649537914FD1B1416E /* Pods-booze-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
