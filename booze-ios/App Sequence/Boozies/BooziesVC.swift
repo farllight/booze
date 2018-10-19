@@ -28,15 +28,17 @@ class BooziesVC: UIViewController {
         title = "Пьянки"
         ibBooziesTableView.delegate = self
         ibBooziesTableView.dataSource = self
+        ibBooziesTableView.register(UINib(nibName: BooziesTableViewCell.xibName, bundle: nil),
+                                    forCellReuseIdentifier: BooziesTableViewCell.reuseId)
     }
 }
 
 extension BooziesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        return tableView.dequeueReusableCell(withIdentifier: BooziesTableViewCell.reuseId, for: indexPath)
     }
 }

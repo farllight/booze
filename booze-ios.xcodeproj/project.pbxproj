@@ -17,6 +17,9 @@
 		76EC9797217A54B900A50261 /* ImageResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC9796217A54B900A50261 /* ImageResources.swift */; };
 		76EC9799217A552C00A50261 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9798217A552C00A50261 /* Profile.storyboard */; };
 		76EC979B217A554E00A50261 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC979A217A554E00A50261 /* ProfileVC.swift */; };
+		76EC979D217A5CB500A50261 /* ColorResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC979C217A5CB500A50261 /* ColorResources.swift */; };
+		76EC97A1217A5DC600A50261 /* BooziesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC979F217A5DC600A50261 /* BooziesTableViewCell.swift */; };
+		76EC97A2217A5DC600A50261 /* BooziesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76EC97A0217A5DC600A50261 /* BooziesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		76EC9796217A54B900A50261 /* ImageResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResources.swift; sourceTree = "<group>"; };
 		76EC9798217A552C00A50261 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		76EC979A217A554E00A50261 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		76EC979C217A5CB500A50261 /* ColorResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorResources.swift; sourceTree = "<group>"; };
+		76EC979F217A5DC600A50261 /* BooziesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooziesTableViewCell.swift; sourceTree = "<group>"; };
+		76EC97A0217A5DC600A50261 /* BooziesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooziesTableViewCell.xib; sourceTree = "<group>"; };
 		A239449180396B5C432338B6 /* Pods_booze_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_booze_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +98,7 @@
 		76EC978F217A4FC700A50261 /* Boozies */ = {
 			isa = PBXGroup;
 			children = (
+				76EC979E217A5D9100A50261 /* BooziesTableViewCell */,
 				76EC9791217A51EC00A50261 /* Boozies.storyboard */,
 				76EC9793217A521300A50261 /* BooziesVC.swift */,
 			);
@@ -111,8 +118,18 @@
 			isa = PBXGroup;
 			children = (
 				76EC9796217A54B900A50261 /* ImageResources.swift */,
+				76EC979C217A5CB500A50261 /* ColorResources.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		76EC979E217A5D9100A50261 /* BooziesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				76EC979F217A5DC600A50261 /* BooziesTableViewCell.swift */,
+				76EC97A0217A5DC600A50261 /* BooziesTableViewCell.xib */,
+			);
+			path = BooziesTableViewCell;
 			sourceTree = "<group>";
 		};
 		9572B2909DA38C4A48B7697D /* Frameworks */ = {
@@ -195,6 +212,7 @@
 				76EC9782217A4CB700A50261 /* Assets.xcassets in Resources */,
 				76EC9799217A552C00A50261 /* Profile.storyboard in Resources */,
 				76EC9792217A51EC00A50261 /* Boozies.storyboard in Resources */,
+				76EC97A2217A5DC600A50261 /* BooziesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,8 +249,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				76EC979B217A554E00A50261 /* ProfileVC.swift in Sources */,
+				76EC979D217A5CB500A50261 /* ColorResources.swift in Sources */,
 				76EC9794217A521300A50261 /* BooziesVC.swift in Sources */,
 				76EC9797217A54B900A50261 /* ImageResources.swift in Sources */,
+				76EC97A1217A5DC600A50261 /* BooziesTableViewCell.swift in Sources */,
 				76EC978E217A4EBA00A50261 /* MainTabBarController.swift in Sources */,
 				76EC977B217A4CB600A50261 /* AppDelegate.swift in Sources */,
 			);

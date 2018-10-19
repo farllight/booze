@@ -12,10 +12,15 @@ class MainTabBarController: UITabBarController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         addViewControllers()
     }
     
     // MARK: - Setup UI
+    private func setupUI() {
+        tabBar.tintColor = .purple
+    }
+    
     private func addViewControllers() {
         viewControllers = [
             addBoozies(),
