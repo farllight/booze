@@ -18,7 +18,7 @@ class MainTabBarController: UITabBarController {
     
     // MARK: - Setup UI
     private func setupUI() {
-        tabBar.tintColor = .purple
+        tabBar.tintColor = ColorResources.shared.purple
     }
     
     private func addViewControllers() {
