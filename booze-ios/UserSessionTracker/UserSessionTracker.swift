@@ -24,6 +24,16 @@ class UserSessionTracker {
         }
     }
     
+    var currentUserId: Int {
+        get {
+            return UserDefaults().integer(forKey: "currentUserId")
+        }
+        
+        set(newCurrentUserId) {
+            UserDefaults().set(newCurrentUserId, forKey: "currentUserId")
+        }
+    }
+    
     private init() {
 
     }
