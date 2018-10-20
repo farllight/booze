@@ -48,6 +48,8 @@
 		76EC9814217AE24B00A50261 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC9813217AE24B00A50261 /* User.swift */; };
 		76EC9817217AE44400A50261 /* RegistrationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC9816217AE44400A50261 /* RegistrationResponseModel.swift */; };
 		76EC9819217AED7000A50261 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC9818217AED7000A50261 /* Party.swift */; };
+		76EC981E217AFD6C00A50261 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC981D217AFD6C00A50261 /* AppRouter.swift */; };
+		76EC9820217B033F00A50261 /* UIViewController+LogoutAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC981F217B033F00A50261 /* UIViewController+LogoutAlert.swift */; };
 		D3D371471BB20568914C2B2C /* Pods_booze_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF989F2650E439AD419CAA6 /* Pods_booze_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,8 @@
 		76EC9813217AE24B00A50261 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		76EC9816217AE44400A50261 /* RegistrationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationResponseModel.swift; sourceTree = "<group>"; };
 		76EC9818217AED7000A50261 /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
+		76EC981D217AFD6C00A50261 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		76EC981F217B033F00A50261 /* UIViewController+LogoutAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LogoutAlert.swift"; sourceTree = "<group>"; };
 		AD13D1649537914FD1B1416E /* Pods-booze-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B212AF6F17EA9C0625FA80FF /* Pods-booze-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		CEF989F2650E439AD419CAA6 /* Pods_booze_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_booze_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,11 +158,12 @@
 				76EC9781217A4CB700A50261 /* Assets.xcassets */,
 				76EC9783217A4CB700A50261 /* LaunchScreen.storyboard */,
 				76EC9786217A4CB700A50261 /* Info.plist */,
-				76EC9815217AE3FE00A50261 /* Models */,
-				76EC9806217AD0F400A50261 /* UserSessionTracker */,
-				76EC97A4217A660D00A50261 /* Core */,
 				76EC9795217A54A300A50261 /* Resources */,
+				76EC981C217AFD4A00A50261 /* Helpers */,
 				76EC97AC217A763F00A50261 /* Extensions */,
+				76EC9806217AD0F400A50261 /* UserSessionTracker */,
+				76EC9815217AE3FE00A50261 /* Models */,
+				76EC97A4217A660D00A50261 /* Core */,
 				76EC978C217A4E8600A50261 /* App Sequence */,
 			);
 			path = "booze-ios";
@@ -242,6 +247,7 @@
 				76EC97AD217A766B00A50261 /* UIViewController+CustomNavigationBar.swift */,
 				76EC97BE217A82E700A50261 /* UIImageView+CustomRoundImageView.swift */,
 				76EC97C7217A955700A50261 /* UIColor+HexColor.swift */,
+				76EC981F217B033F00A50261 /* UIViewController+LogoutAlert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -354,6 +360,14 @@
 				76EC9818217AED7000A50261 /* Party.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		76EC981C217AFD4A00A50261 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				76EC981D217AFD6C00A50261 /* AppRouter.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76EC979B217A554E00A50261 /* ProfileVC.swift in Sources */,
+				76EC9820217B033F00A50261 /* UIViewController+LogoutAlert.swift in Sources */,
 				76EC97BF217A82E700A50261 /* UIImageView+CustomRoundImageView.swift in Sources */,
 				76EC97F6217AB27200A50261 /* ProfileSwitchTableViewCell.swift in Sources */,
 				76EC979D217A5CB500A50261 /* ColorResources.swift in Sources */,
@@ -512,6 +527,7 @@
 				76EC97A1217A5DC600A50261 /* BooziesTableViewCell.swift in Sources */,
 				76EC978E217A4EBA00A50261 /* MainTabBarController.swift in Sources */,
 				76EC97C8217A955700A50261 /* UIColor+HexColor.swift in Sources */,
+				76EC981E217AFD6C00A50261 /* AppRouter.swift in Sources */,
 				76EC9817217AE44400A50261 /* RegistrationResponseModel.swift in Sources */,
 				76EC97CD217AA2BE00A50261 /* CodeConformitionVC.swift in Sources */,
 				76EC977B217A4CB600A50261 /* AppDelegate.swift in Sources */,

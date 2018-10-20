@@ -55,10 +55,10 @@ class CodeConformitionVC: UIViewController {
     // MARK: - Actions
     @IBAction func continieButtonTouched(_ sender: UIButton) {
         KVNProgress.show()
-        DataClient.shared.login(phone: phone, password: ibCodeConformitionTextField.text ?? "") { [weak self] (isSuccess) in
+        DataClient.shared.login(phone: phone, password: ibCodeConformitionTextField.text ?? "") { (isSuccess) in
             if isSuccess {
                 KVNProgress.dismiss()
-                self?.present(MainTabBarController(), animated: true, completion: nil)
+                AppRouter.shared.replaceRootViewController(viewController: MainTabBarController())
             } else {
                 KVNProgress.showError()
             }
@@ -66,6 +66,9 @@ class CodeConformitionVC: UIViewController {
     }
     
     @IBAction func notGetCodeButtonTouched(_ sender: Any) {
-        // TODO: - Senf request
+        KVNProgress.show(withStatus: "Загрузка...")
+        DataClient.shared.registration(phone: phone) { (isSuccess) in
+            KVNProgress.dismiss()
+        }
     }
 }

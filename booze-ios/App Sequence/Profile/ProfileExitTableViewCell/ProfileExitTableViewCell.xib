@@ -23,16 +23,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVq-JG-AqM">
-                        <rect key="frame" x="130" y="6" width="60" height="32"/>
-                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
-                        <state key="normal" title="ВЫЙТИ">
-                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </state>
-                        <connections>
-                            <action selector="exitButtonTouched:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="U3y-3o-xWG"/>
-                        </connections>
-                    </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VF2-pb-cqA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,14 +37,20 @@
                             <constraint firstAttribute="height" constant="1" id="Eth-0H-3sl"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выйти" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxj-F4-bkS">
+                        <rect key="frame" x="134" y="12" width="52.5" height="20"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="lVq-JG-AqM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AUQ-Zz-CAD"/>
+                    <constraint firstItem="Mxj-F4-bkS" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="EC4-lh-g10"/>
                     <constraint firstAttribute="bottom" secondItem="UzD-ql-iMQ" secondAttribute="bottom" id="KyC-sj-cvh"/>
                     <constraint firstItem="VF2-pb-cqA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="R5I-Np-9Mf"/>
                     <constraint firstItem="VF2-pb-cqA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bNq-kd-awP"/>
                     <constraint firstAttribute="trailing" secondItem="VF2-pb-cqA" secondAttribute="trailing" id="eu6-sA-T5q"/>
-                    <constraint firstItem="lVq-JG-AqM" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="lrv-h3-yCg"/>
+                    <constraint firstItem="Mxj-F4-bkS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gYW-uj-e2e"/>
                     <constraint firstAttribute="trailing" secondItem="UzD-ql-iMQ" secondAttribute="trailing" id="vVb-JJ-Lfv"/>
                     <constraint firstItem="UzD-ql-iMQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xsa-3x-eL7"/>
                 </constraints>
@@ -62,7 +58,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bottomBorderView" destination="UzD-ql-iMQ" id="od2-Ex-xBr"/>
-                <outlet property="ibExitButton" destination="lVq-JG-AqM" id="wUG-cF-NXH"/>
+                <outlet property="ibExitLabel" destination="Mxj-F4-bkS" id="xpl-UE-4p5"/>
                 <outlet property="topBorderView" destination="VF2-pb-cqA" id="mlX-Lr-DVD"/>
             </connections>
         </tableViewCell>

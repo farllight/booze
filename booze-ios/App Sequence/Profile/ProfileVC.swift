@@ -64,10 +64,6 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         return 4
     }
     
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 44
-//    }
-//
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 44))
         view.backgroundColor = .white
@@ -96,14 +92,16 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: ProfileExitTableViewCell.reuseId, for: indexPath) as! ProfileExitTableViewCell
-            cell.setup(delegate: self)
             return cell
         }
     }
-}
-
-extension ProfileVC: ProfileExitTableViewCellDelegate {
-    func exitButtonTouched() {
-        // TODO: - logout user
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 3 {
+            showLogoutAlert(yesCompletion: {
+                UserSessionTracker.shared.logout()
+                AppRouter.shared.replaceRootViewController(viewController: UINavigationController(rootViewController: AuthVC.storyboardInstance()))
+            }) { }
+        }
     }
 }
