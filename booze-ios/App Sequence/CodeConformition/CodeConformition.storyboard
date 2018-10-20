@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m5M-ul-cJG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Code ConformitionVC-->
+        <scene sceneID="aj4-20-rQS">
+            <objects>
+                <viewController id="m5M-ul-cJG" customClass="CodeConformitionVC" customModule="booze_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FIi-cB-FKi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5A-NY-7XV">
+                                <rect key="frame" x="146" y="40" width="83" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мы отправили Вам код через СМС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTW-cQ-mqm">
+                                <rect key="frame" x="47.5" y="80" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Код подтверждения" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yli-yt-jiS">
+                                <rect key="frame" x="16" y="141" width="343" height="17"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vi8-Y6-g10">
+                                <rect key="frame" x="16" y="162" width="343" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="r4G-ni-Qoq"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqe-tx-LZc">
+                                <rect key="frame" x="133" y="239" width="109" height="30"/>
+                                <state key="normal" title="ПРОДОЛЖИТЬ"/>
+                                <connections>
+                                    <action selector="contibitButtonTouched:" destination="m5M-ul-cJG" eventType="touchUpInside" id="dOd-Dh-Fqf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8v-Ls-8Yg">
+                                <rect key="frame" x="123" y="320" width="129" height="30"/>
+                                <state key="normal" title="Не получили код?"/>
+                                <connections>
+                                    <action selector="notGetCodeButtonTouched:" destination="m5M-ul-cJG" eventType="touchUpInside" id="xpp-EQ-tq2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LTW-cQ-mqm" firstAttribute="top" secondItem="E5A-NY-7XV" secondAttribute="bottom" constant="4" id="1yD-Be-tpq"/>
+                            <constraint firstItem="yli-yt-jiS" firstAttribute="leading" secondItem="0e5-aC-lgd" secondAttribute="leading" constant="16" id="AYT-oQ-Cvi"/>
+                            <constraint firstItem="0e5-aC-lgd" firstAttribute="trailing" secondItem="yli-yt-jiS" secondAttribute="trailing" constant="16" id="CXi-5o-WiT"/>
+                            <constraint firstItem="yli-yt-jiS" firstAttribute="top" secondItem="LTW-cQ-mqm" secondAttribute="bottom" constant="40" id="FXU-oF-jWT"/>
+                            <constraint firstItem="fqe-tx-LZc" firstAttribute="top" secondItem="vi8-Y6-g10" secondAttribute="bottom" constant="76" id="Fls-OH-wJ7"/>
+                            <constraint firstItem="vi8-Y6-g10" firstAttribute="leading" secondItem="0e5-aC-lgd" secondAttribute="leading" constant="16" id="IDY-z9-sWe"/>
+                            <constraint firstItem="fqe-tx-LZc" firstAttribute="centerX" secondItem="FIi-cB-FKi" secondAttribute="centerX" id="Qon-36-smV"/>
+                            <constraint firstItem="E5A-NY-7XV" firstAttribute="centerX" secondItem="FIi-cB-FKi" secondAttribute="centerX" id="Qrk-ob-shm"/>
+                            <constraint firstItem="X8v-Ls-8Yg" firstAttribute="centerX" secondItem="FIi-cB-FKi" secondAttribute="centerX" id="Wkk-xj-008"/>
+                            <constraint firstItem="E5A-NY-7XV" firstAttribute="top" secondItem="0e5-aC-lgd" secondAttribute="top" constant="20" id="gER-Vh-LCX"/>
+                            <constraint firstItem="LTW-cQ-mqm" firstAttribute="centerX" secondItem="FIi-cB-FKi" secondAttribute="centerX" id="jmk-Q1-q9m"/>
+                            <constraint firstItem="0e5-aC-lgd" firstAttribute="trailing" secondItem="vi8-Y6-g10" secondAttribute="trailing" constant="16" id="wi3-Tx-O1y"/>
+                            <constraint firstItem="vi8-Y6-g10" firstAttribute="top" secondItem="yli-yt-jiS" secondAttribute="bottom" constant="4" id="wxQ-rv-Uro"/>
+                            <constraint firstItem="X8v-Ls-8Yg" firstAttribute="top" secondItem="fqe-tx-LZc" secondAttribute="bottom" constant="51" id="xeI-13-bH2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0e5-aC-lgd"/>
+                    </view>
+                    <connections>
+                        <outlet property="ibCodeConformitionTextField" destination="yli-yt-jiS" id="OqP-fx-hpO"/>
+                        <outlet property="ibContinieButton" destination="fqe-tx-LZc" id="Fgf-2h-3D9"/>
+                        <outlet property="ibInformationLabel" destination="LTW-cQ-mqm" id="2Ux-4n-08O"/>
+                        <outlet property="ibNotGetCodeButton" destination="X8v-Ls-8Yg" id="Abv-uO-fDO"/>
+                        <outlet property="ibPhoneLabel" destination="E5A-NY-7XV" id="XGM-ZV-L6h"/>
+                        <outlet property="ibSepatorView" destination="vi8-Y6-g10" id="ZCf-38-Yej"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIc-DC-Bu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-241" y="134"/>
+        </scene>
+    </scenes>
+</document>
