@@ -13,8 +13,10 @@ class ImageResources {
     
     let champagne = UIImage(imageLiteralResourceName: "champagne")
     let profile = UIImage(imageLiteralResourceName: "profile")
+    let profileAvatarMock = UIImage(imageLiteralResourceName: "profile_mock")
+    let checkbox = UIImage(imageLiteralResourceName: "checkbox")
     
-    private init() {
+    private init() { 
         
     }
 }

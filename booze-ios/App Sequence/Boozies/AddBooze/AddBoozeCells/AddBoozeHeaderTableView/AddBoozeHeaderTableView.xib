@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddBoozeHeaderTableView" customModule="booze_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="204"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVj-2t-mDP">
+                    <rect key="frame" x="16" y="177.5" width="28.5" height="14.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRy-zR-qca">
+                    <rect key="frame" x="45" y="6" width="294" height="28.5"/>
+                    <string key="text">Укажите название вечеринки и выберите дату. 
+Вы также можете загрузить изображение </string>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VRy-zR-qca" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="45" id="2TU-W1-HrI"/>
+                <constraint firstItem="YVj-2t-mDP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="G6A-aW-tOz"/>
+                <constraint firstItem="YVj-2t-mDP" firstAttribute="top" secondItem="VRy-zR-qca" secondAttribute="bottom" constant="143" id="ZqY-ll-GZN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YVj-2t-mDP" secondAttribute="bottom" constant="12" id="amH-xN-pzO"/>
+                <constraint firstAttribute="trailing" secondItem="VRy-zR-qca" secondAttribute="trailing" constant="45" id="haI-l3-Ifj"/>
+                <constraint firstItem="VRy-zR-qca" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="6" id="i8a-IM-8E4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="ibCountLabel" destination="YVj-2t-mDP" id="2dE-DB-XNL"/>
+                <outlet property="ibHeaderLabel" destination="VRy-zR-qca" id="PE8-HU-r0Z"/>
+            </connections>
+            <point key="canvasLocation" x="60.799999999999997" y="-113.3433283358321"/>
+        </view>
+    </objects>
+</document>

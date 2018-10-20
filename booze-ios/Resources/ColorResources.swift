@@ -15,6 +15,7 @@ class ColorResources {
     let authTextFieldColor = UIColor(hex: "#80FFFFFF")
     let cellProfileBackgroundColor = UIColor(hex: "#FFEEEEEE").withAlphaComponent(0.3)
     let cellProfileBorderColor = UIColor(hex: "#1A979797").withAlphaComponent(0.3)
+    let blueCheckboxBorderColor = UIColor(hex: "#00A0FF")
     
     private init() { 
         

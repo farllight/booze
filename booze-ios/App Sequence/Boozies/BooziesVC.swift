@@ -53,7 +53,7 @@ class BooziesVC: UIViewController {
     
     // MARK: - Actions
     @objc private func addRightBarButtonItemTouched() {
-        navigationController?.pushViewController(AddBoozeVC(), animated: true)
+        navigationController?.pushViewController(AddBoozeVC.storyboardInstance(), animated: true)
     }
     
     // MARK: - Load data

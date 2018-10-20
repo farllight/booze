@@ -18,13 +18,22 @@ class DataClient {
     }
     
     func registration(phone: String, completion: @escaping IsSuccessCompletion) {
-        APIClient.shared.registration(phone: phone) { (data) in
-            completion(true)
+        APIClient.shared.registration(phone: phone) { (data, error)  in
+            if error == nil {
+                completion(true)
+            } else {
+                completion(false)
+            }
+            
         }
     }
     
     func login(phone: String, password: String, completion: @escaping IsSuccessCompletion) {
-        APIClient.shared.login(phone: phone, password: password) { (data) in
+        APIClient.shared.login(phone: phone, password: password) { (data, error) in
+            if error != nil {
+                completion(false)
+            }
+            
             do {
                 let registrationResponseModel = try JSONDecoder().decode(RegistrationResponseModel.self, from: data)
                 UserSessionTracker.shared.token = registrationResponseModel.token
@@ -38,7 +47,11 @@ class DataClient {
     }
     
     func getUser(currentUserId: Int, completion: @escaping (User?) -> Void) {
-        APIClient.shared.getUser(userId: currentUserId) { (data) in
+        APIClient.shared.getUser(userId: currentUserId) { (data, error) in
+            if error != nil {
+                completion(nil)
+            }
+            
             do {
                 let user = try JSONDecoder().decode(User.self, from: data)
                 completion(user)
@@ -50,8 +63,12 @@ class DataClient {
     }
     
     func setParty(party: Party, completion: @escaping IsSuccessCompletion) {
-        APIClient.shared.setParty(party: party) { (data) in
-            completion(true)
+        APIClient.shared.setParty(party: party) { (data, error) in
+            if error == nil {
+                completion(true)
+            } else {
+                completion(false)
+            }
         }
     }
 }

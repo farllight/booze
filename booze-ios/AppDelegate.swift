@@ -20,8 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             window?.rootViewController = UINavigationController(rootViewController: AuthVC.storyboardInstance())
         } 
-        
+
         return true 
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let   tokenString = deviceToken.reduce("", {$0 + String(format: "%02X",    $1)})
+        print("deviceToken: \(tokenString)")
     }
 }
 

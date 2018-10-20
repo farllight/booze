@@ -15,6 +15,7 @@ struct User: Codable {
     var parties: [Party]
     var avatar: String?
     var balance: Double?
+//    var phone: String?
     
     func toDictionary() -> [String: Any] {
         return [

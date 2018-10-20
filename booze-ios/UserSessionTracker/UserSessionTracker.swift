@@ -18,7 +18,6 @@ class UserSessionTracker {
         get {
             let token = UserDefaults().object(forKey: UserSessionTracker.userDefaultsTokenName) as? String
             return token ?? ""
-//            return "4d16cd3003143c502e4c5ac9bbb64a76"
         }
         
         set(newToken) {
@@ -38,12 +37,15 @@ class UserSessionTracker {
     }
     
     private init() {
-
+        UserDefaults().register(defaults: [
+            "token": "",
+            "currentUserId": -1
+        ])
     }
     
     func isAuth() -> Bool {
-        let token = UserDefaults().object(forKey: UserSessionTracker.userDefaultsTokenName) as? String
-        return !(token?.isEmpty ?? true)
+        let token = UserDefaults().object(forKey: UserSessionTracker.userDefaultsTokenName) as! String
+        return !token.isEmpty
     }
     
     func logout() {

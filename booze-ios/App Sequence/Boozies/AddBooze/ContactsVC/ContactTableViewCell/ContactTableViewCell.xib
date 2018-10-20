@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="59" id="KGk-i7-Jjw" customClass="ContactTableViewCell" customModule="booze_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="58.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p9-FJ-p1i">
+                        <rect key="frame" x="16" y="8" width="42" height="42.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42.5" id="dpY-wm-KP5"/>
+                            <constraint firstAttribute="width" constant="42" id="ySt-6c-NbQ"/>
+                        </constraints>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя пользователя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsq-5e-QHK">
+                        <rect key="frame" x="74" y="8" width="132" height="18"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJm-WI-bLI">
+                        <rect key="frame" x="74" y="30" width="110.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gsq-5e-QHK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="43p-zu-69R"/>
+                    <constraint firstItem="9p9-FJ-p1i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="8Q6-Pj-xxh"/>
+                    <constraint firstItem="eJm-WI-bLI" firstAttribute="leading" secondItem="9p9-FJ-p1i" secondAttribute="trailing" constant="16" id="Anc-XQ-t22"/>
+                    <constraint firstAttribute="bottom" secondItem="eJm-WI-bLI" secondAttribute="bottom" constant="12" id="LIj-Wd-Bpq"/>
+                    <constraint firstItem="gsq-5e-QHK" firstAttribute="leading" secondItem="9p9-FJ-p1i" secondAttribute="trailing" constant="16" id="NAm-ea-x1F"/>
+                    <constraint firstItem="9p9-FJ-p1i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="RwM-79-gWG"/>
+                    <constraint firstAttribute="bottom" secondItem="9p9-FJ-p1i" secondAttribute="bottom" constant="8" id="aGb-71-OY7"/>
+                    <constraint firstItem="eJm-WI-bLI" firstAttribute="top" secondItem="gsq-5e-QHK" secondAttribute="bottom" constant="4" id="cM9-tD-Oir"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ibCheckboxButton" destination="9p9-FJ-p1i" id="zP7-97-JjJ"/>
+                <outlet property="ibNameLabel" destination="gsq-5e-QHK" id="RKR-g0-FLS"/>
+                <outlet property="ibPhoneNumberLabel" destination="eJm-WI-bLI" id="8gu-US-6rh"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="118.29085457271366"/>
+        </tableViewCell>
+    </objects>
+</document>
