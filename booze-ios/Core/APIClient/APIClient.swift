@@ -25,7 +25,6 @@ class APIClient {
         let fullUrl = baseUrl + "registration"
         let params = [
             "phone": phone,
-            "password": "1",
             "platform": "iOS",
             "version": "1.0",
             "name": "far__light"
@@ -54,6 +53,14 @@ class APIClient {
     func getUser(userId: Int, completion: @escaping Completion) {
         let fullUrl = baseUrl + "user/\(userId)"
         Alamofire.request(fullUrl, method: .get, parameters: nil, encoding: JSONEncoding(), headers: ["apikey": UserSessionTracker.shared.token]).responseJSON { (data) in
+            completion(data.data ?? Data())
+        }
+    }
+    
+    func setParty(party: Party, completion: @escaping Completion) {
+        let fullUrl = baseUrl + "party/"
+        let party = party.toDictionary()
+        Alamofire.request(fullUrl, method: .post, parameters: party, encoding: JSONEncoding(), headers: ["Content-Type" : "application/json", "apikey": UserSessionTracker.shared.token]).responseJSON { (data) in
             completion(data.data ?? Data())
         }
     }

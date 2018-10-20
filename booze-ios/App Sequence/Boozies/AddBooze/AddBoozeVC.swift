@@ -8,6 +8,7 @@
 
 import UIKit
 import Eureka
+import KVNProgress
 
 class AddBoozeVC: FormViewController {
     private var createBoozeRightBarButtonItem = UIBarButtonItem()
@@ -30,14 +31,17 @@ class AddBoozeVC: FormViewController {
         form +++ Section()
         <<< TextRow() {
             $0.title = "Название"
+            $0.tag = "Name"
         }
         
         <<< DateRow() {
             $0.title = "Дата"
+            $0.tag = "Date"
         }
         
         <<< ButtonRow() {
             $0.title = "Добавить участников"
+            $0.tag = "AddUser"
         }
     }
     
@@ -51,6 +55,30 @@ class AddBoozeVC: FormViewController {
     
     // MARK: - Actions
     @objc private func createBoozeRightBarButtonItemTouched() {
-        // TODO: - create booze
+        KVNProgress.show()
+        
+        if let party = buildParty() {
+            DataClient.shared.setParty(party: party) { [weak self] (isSuccess) in
+                if isSuccess {
+                    KVNProgress.dismiss()
+                    self?.navigationController?.popViewController(animated: true)
+                } else {
+                    KVNProgress.showError()
+                }
+            }
+        } else {
+            KVNProgress.showError(withStatus: "Заполнены не все поля!")
+        }
+    }
+     
+    private func buildParty() -> Party? {
+        guard let name = form.rowBy(tag: "Name")?.baseValue as? String,
+            let date = form.rowBy(tag: "Date")?.baseValue as? Date else {
+                return nil
+        }
+        
+        return Party(name: name,
+                     date: Int(date.timeIntervalSince1970),
+                     users: [])        
     }
 }

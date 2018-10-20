@@ -13,10 +13,12 @@ class UserSessionTracker {
     
     private static let userDefaultsTokenName = "token"
     
+    // TODO: - Warning! Prokem with SMS auth! Solve for developer.
     var token: String {
         get {
             let token = UserDefaults().object(forKey: UserSessionTracker.userDefaultsTokenName) as? String
             return token ?? ""
+//            return "4d16cd3003143c502e4c5ac9bbb64a76"
         }
         
         set(newToken) {
@@ -24,6 +26,7 @@ class UserSessionTracker {
         }
     }
     
+    // Also solve for deloper
     var currentUserId: Int {
         get {
             return UserDefaults().integer(forKey: "currentUserId")

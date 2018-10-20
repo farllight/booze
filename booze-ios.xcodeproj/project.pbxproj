@@ -50,6 +50,8 @@
 		76EC9819217AED7000A50261 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC9818217AED7000A50261 /* Party.swift */; };
 		76EC981E217AFD6C00A50261 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC981D217AFD6C00A50261 /* AppRouter.swift */; };
 		76EC9820217B033F00A50261 /* UIViewController+LogoutAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC981F217B033F00A50261 /* UIViewController+LogoutAlert.swift */; };
+		76EC9822217B216800A50261 /* Array+CountToHumanString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC9821217B216800A50261 /* Array+CountToHumanString.swift */; };
+		76EC9824217B229800A50261 /* Int+TimeStumpToHumanDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC9823217B229800A50261 /* Int+TimeStumpToHumanDate.swift */; };
 		D3D371471BB20568914C2B2C /* Pods_booze_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF989F2650E439AD419CAA6 /* Pods_booze_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		76EC9818217AED7000A50261 /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		76EC981D217AFD6C00A50261 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		76EC981F217B033F00A50261 /* UIViewController+LogoutAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LogoutAlert.swift"; sourceTree = "<group>"; };
+		76EC9821217B216800A50261 /* Array+CountToHumanString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+CountToHumanString.swift"; sourceTree = "<group>"; };
+		76EC9823217B229800A50261 /* Int+TimeStumpToHumanDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+TimeStumpToHumanDate.swift"; sourceTree = "<group>"; };
 		AD13D1649537914FD1B1416E /* Pods-booze-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B212AF6F17EA9C0625FA80FF /* Pods-booze-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		CEF989F2650E439AD419CAA6 /* Pods_booze_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_booze_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +252,8 @@
 				76EC97BE217A82E700A50261 /* UIImageView+CustomRoundImageView.swift */,
 				76EC97C7217A955700A50261 /* UIColor+HexColor.swift */,
 				76EC981F217B033F00A50261 /* UIViewController+LogoutAlert.swift */,
+				76EC9821217B216800A50261 /* Array+CountToHumanString.swift */,
+				76EC9823217B229800A50261 /* Int+TimeStumpToHumanDate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -529,11 +535,13 @@
 				76EC97C8217A955700A50261 /* UIColor+HexColor.swift in Sources */,
 				76EC981E217AFD6C00A50261 /* AppRouter.swift in Sources */,
 				76EC9817217AE44400A50261 /* RegistrationResponseModel.swift in Sources */,
+				76EC9824217B229800A50261 /* Int+TimeStumpToHumanDate.swift in Sources */,
 				76EC97CD217AA2BE00A50261 /* CodeConformitionVC.swift in Sources */,
 				76EC977B217A4CB600A50261 /* AppDelegate.swift in Sources */,
 				76EC9808217AD10C00A50261 /* UserSessionTracker.swift in Sources */,
 				76EC9819217AED7000A50261 /* Party.swift in Sources */,
 				76EC9802217AB8DD00A50261 /* ProfileExitTableViewCell.swift in Sources */,
+				76EC9822217B216800A50261 /* Array+CountToHumanString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

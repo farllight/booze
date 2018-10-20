@@ -9,7 +9,15 @@
 import UIKit
 
 struct Party: Codable {
-    let name: String
-    let date: Int
-    let users: [User]
+    var name: String
+    var date: Int
+    var users: [User]
+    
+    func toDictionary() -> [String: Any] {
+        return [
+            "name": name,
+            "date": date,
+            "users": users.map({ $0.toDictionary() })
+        ]
+    }
 }

@@ -48,4 +48,10 @@ class DataClient {
             }
         }
     }
+    
+    func setParty(party: Party, completion: @escaping IsSuccessCompletion) {
+        APIClient.shared.setParty(party: party) { (data) in
+            completion(true)
+        }
+    }
 }

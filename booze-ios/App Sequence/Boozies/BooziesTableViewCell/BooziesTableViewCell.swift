@@ -14,7 +14,8 @@ class BooziesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var boozeImageView: UIImageView!
     @IBOutlet weak var boozeNameLabel: UILabel!
-    @IBOutlet weak var boozeMoneyLabel: UILabel!
+    @IBOutlet weak var boozeDateLabel: UILabel!
+    @IBOutlet weak var ibCountOfUsersLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +25,7 @@ class BooziesTableViewCell: UITableViewCell {
     
     func setupUI(party: Party) {
         boozeNameLabel.text = party.name
+        ibCountOfUsersLabel.text = party.users.countInHumanString()
+        boozeDateLabel.text = party.date.timeStumpToHumanDate()
     }
 }

@@ -15,4 +15,15 @@ struct User: Codable {
     var parties: [Party]
     var avatar: String?
     var balance: Double?
+    
+    func toDictionary() -> [String: Any] {
+        return [
+            "id": id,
+            "surname": surname as Any,
+            "name": name as Any,
+            "parties": parties.map({ $0.toDictionary() }),
+            "avatar": avatar as Any,
+            "balance": balance as Any
+        ]
+    }
 }
