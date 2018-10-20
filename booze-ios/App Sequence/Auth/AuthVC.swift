@@ -50,7 +50,9 @@ class AuthVC: UIViewController {
         DataClient.shared.registration(phone: ibPhoneTextField.text ?? "") { [weak self] (isSuccess)  in
             if isSuccess {
                 KVNProgress.dismiss()
-                self?.navigationController?.pushViewController(CodeConformitionVC.storyboardInstance(), animated: true)
+                let vc = CodeConformitionVC.storyboardInstance()
+                vc.phone = self?.ibPhoneTextField.text ?? ""
+                self?.navigationController?.pushViewController(vc, animated: true)
             } else {
                 KVNProgress.showError()
             }

@@ -8,9 +8,11 @@
 
 import UIKit
 
-struct User: Codable { 
+struct User: Codable {  
     var id: Int
     var surname: String?
     var name: String?
     var parties: [Party]?
+    var avatar: String?
+    var balance: Double?
 }

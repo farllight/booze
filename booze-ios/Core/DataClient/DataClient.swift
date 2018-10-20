@@ -25,7 +25,14 @@ class DataClient {
     
     func login(phone: String, password: String, completion: @escaping IsSuccessCimpletion) {
         APIClient.shared.login(phone: phone, password: password) { (data) in
-            // TODO: - parse response
+            do {
+                let registrationResponseModel = try JSONDecoder().decode(RegistrationResponseModel.self, from: data)
+                UserSessionTracker.shared.token = registrationResponseModel.token
+                completion(true)
+            } catch {
+                print(error)
+                completion(false)
+            }
         }
     }
 }

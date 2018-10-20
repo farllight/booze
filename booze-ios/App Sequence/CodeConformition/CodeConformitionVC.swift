@@ -35,6 +35,7 @@ class CodeConformitionVC: UIViewController {
     private func setupUI() {
         setupColors()
         setupNavigationBar()
+        self.ibPhoneLabel.text = phone
     }
     
     private func setupColors() {

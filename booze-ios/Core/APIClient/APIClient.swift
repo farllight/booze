@@ -15,7 +15,7 @@ class APIClient {
     static let shared = APIClient()
     
     private let baseUrl = "http://beta-secothon.profsoft.online/api/"
-    private let header = ["Content-Type" : "application/json"]
+//    private let header =
     
     private init() {
         
@@ -31,7 +31,7 @@ class APIClient {
             "name": "far__light"
         ]
         
-        Alamofire.request(fullUrl, method: .post, parameters: params, encoding: JSONEncoding(), headers: header).responseJSON { (data) in
+        Alamofire.request(fullUrl, method: .post, parameters: params, encoding: JSONEncoding(), headers: ["Content-Type" : "application/json"]).responseJSON { (data) in
             completion(data.data ?? Data())
         }
     }
@@ -46,8 +46,14 @@ class APIClient {
             "name": "far__light"
         ]
         
-        Alamofire.request(fullUrl, method: .post, parameters: params, encoding: JSONEncoding(), headers: header).responseJSON { (data) in
+        Alamofire.request(fullUrl, method: .post, parameters: params, encoding: JSONEncoding(), headers: ["Content-Type" : "application/json"]).responseJSON { (data) in
             completion(data.data ?? Data())
         }
+    }
+    
+    func getUsers(completion: @escaping Completion) {
+        let fullUrl = baseUrl + "user-gets"
+//        Alamofire.request(fullUrl, method: .get, parameters: [], encoding: JSONEncoding(), headers: ["apikey":])
+        
     }
 }
