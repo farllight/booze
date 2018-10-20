@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KVNProgress
 
 class AuthVC: UIViewController {
     @IBOutlet weak var ibPhoneTitleLabel: UILabel!
@@ -45,6 +46,14 @@ class AuthVC: UIViewController {
     
     // MARK: - Actions
     @IBAction func sendCodeButtonTouched(_ sender: UIButton) {
-        // Send request on server for code
+        KVNProgress.show()
+        DataClient.shared.registration(phone: ibPhoneTextField.text ?? "") { [weak self] (isSuccess)  in
+            if isSuccess {
+                KVNProgress.dismiss()
+                self?.navigationController?.pushViewController(CodeConformitionVC.storyboardInstance(), animated: true)
+            } else {
+                KVNProgress.showError()
+            }
+        }
     }
 }

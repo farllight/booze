@@ -18,65 +18,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sjK-BL-uMu">
-                                <rect key="frame" x="0.0" y="270.5" width="375" height="140"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="cl8-Fj-SaP"/>
-                                </constraints>
                                 <sections/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtH-oN-3vc">
-                                <rect key="frame" x="90" y="448.5" width="195" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Напомнить о долгах">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="remindButtonTouched:" destination="r0m-uS-YIZ" eventType="touchUpInside" id="cSk-dh-mk5"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_mock" translatesAutoresizingMaskIntoConstraints="NO" id="e87-Mh-f8R">
-                                <rect key="frame" x="137.5" y="40" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="DD0-8h-XLR"/>
-                                    <constraint firstAttribute="height" constant="100" id="Xah-33-wM4"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Владислав Марков" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kn1-Ri-0sk">
-                                <rect key="frame" x="58" y="156" width="259" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Баланс: 500 рублей" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iki-3m-VWq">
-                                <rect key="frame" x="108.5" y="200" width="158.5" height="20.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sjK-BL-uMu" firstAttribute="top" secondItem="Iki-3m-VWq" secondAttribute="bottom" constant="50" id="3J1-J5-q0B"/>
-                            <constraint firstItem="9T2-Lp-AB1" firstAttribute="trailing" secondItem="BtH-oN-3vc" secondAttribute="trailing" constant="90" id="5p5-9g-UTE"/>
-                            <constraint firstItem="e87-Mh-f8R" firstAttribute="centerX" secondItem="7YE-vw-6n5" secondAttribute="centerX" id="6JZ-bl-3n8"/>
-                            <constraint firstItem="BtH-oN-3vc" firstAttribute="top" secondItem="sjK-BL-uMu" secondAttribute="bottom" constant="38" id="8WY-kA-ZRl"/>
-                            <constraint firstItem="BtH-oN-3vc" firstAttribute="centerX" secondItem="7YE-vw-6n5" secondAttribute="centerX" id="FU9-nS-Ftb"/>
                             <constraint firstItem="9T2-Lp-AB1" firstAttribute="trailing" secondItem="sjK-BL-uMu" secondAttribute="trailing" id="Grh-Th-0bi"/>
-                            <constraint firstItem="Iki-3m-VWq" firstAttribute="top" secondItem="kn1-Ri-0sk" secondAttribute="bottom" constant="8" id="I3T-2N-nD5"/>
-                            <constraint firstItem="Iki-3m-VWq" firstAttribute="centerX" secondItem="7YE-vw-6n5" secondAttribute="centerX" id="bIc-MS-owe"/>
+                            <constraint firstItem="sjK-BL-uMu" firstAttribute="top" secondItem="9T2-Lp-AB1" secondAttribute="top" id="HQb-sR-vhm"/>
+                            <constraint firstItem="9T2-Lp-AB1" firstAttribute="bottom" secondItem="sjK-BL-uMu" secondAttribute="bottom" id="c1T-fh-wgv"/>
                             <constraint firstItem="sjK-BL-uMu" firstAttribute="leading" secondItem="9T2-Lp-AB1" secondAttribute="leading" id="dKi-k1-AIo"/>
-                            <constraint firstItem="e87-Mh-f8R" firstAttribute="top" secondItem="9T2-Lp-AB1" secondAttribute="top" constant="20" id="gAY-6Z-GYW"/>
-                            <constraint firstItem="kn1-Ri-0sk" firstAttribute="top" secondItem="e87-Mh-f8R" secondAttribute="bottom" constant="16" id="qgG-5K-dU3"/>
-                            <constraint firstItem="BtH-oN-3vc" firstAttribute="leading" secondItem="9T2-Lp-AB1" secondAttribute="leading" constant="90" id="y4q-Zh-pQI"/>
-                            <constraint firstItem="kn1-Ri-0sk" firstAttribute="centerX" secondItem="7YE-vw-6n5" secondAttribute="centerX" id="yXs-sf-sih"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9T2-Lp-AB1"/>
                     </view>
                     <connections>
                         <outlet property="ibProfileTableView" destination="sjK-BL-uMu" id="h4Q-uw-Ais"/>
-                        <outlet property="ibRemindButton" destination="BtH-oN-3vc" id="RPx-DH-oYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ru9-M4-Bea" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -84,7 +41,4 @@
             <point key="canvasLocation" x="103" y="119"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="profile_mock" width="700" height="720"/>
-    </resources>
 </document>

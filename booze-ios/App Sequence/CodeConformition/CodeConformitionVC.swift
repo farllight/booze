@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KVNProgress
 
 class CodeConformitionVC: UIViewController {
     @IBOutlet weak var ibPhoneLabel: UILabel!
@@ -15,6 +16,8 @@ class CodeConformitionVC: UIViewController {
     @IBOutlet weak var ibSepatorView: UIView!
     @IBOutlet weak var ibContinieButton: UIButton!
     @IBOutlet weak var ibNotGetCodeButton: UIButton!
+    
+    var phone = ""
     
     // MARK: - Initialize
     static func storyboardInstance() -> CodeConformitionVC {
@@ -49,8 +52,16 @@ class CodeConformitionVC: UIViewController {
     }
     
     // MARK: - Actions
-    @IBAction func contibitButtonTouched(_ sender: UIButton) {
-        // TODO: - send request
+    @IBAction func continieButtonTouched(_ sender: UIButton) {
+        KVNProgress.show()
+        DataClient.shared.login(phone: phone, password: ibCodeConformitionTextField.text ?? "") { [weak self] (isSuccess) in
+            if isSuccess {
+                KVNProgress.dismiss()
+                self?.present(MainTabBarController(), animated: true, completion: nil)
+            } else {
+                KVNProgress.showError()
+            }
+        }
     }
     
     @IBAction func notGetCodeButtonTouched(_ sender: Any) {

@@ -13,8 +13,10 @@ class ColorResources {
     
     let mainThemeColor = UIColor(hex: "#FF186D6C")
     let authTextFieldColor = UIColor(hex: "#80FFFFFF")
+    let cellProfileBackgroundColor = UIColor(hex: "#FFEEEEEE").withAlphaComponent(0.3)
+    let cellProfileBorderColor = UIColor(hex: "#1A979797").withAlphaComponent(0.3)
     
-    private init() {
+    private init() { 
         
     }
 }

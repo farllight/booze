@@ -1,5 +1,5 @@
 //
-//  ProfileTableViewCellModel.swift
+//  RegistrationResponseModel.swift
 //  booze-ios
 //
 //  Created by Владислав Марков on 20/10/2018.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-struct ProfileTableViewCellModel {
-    let name: String
-    let count: Int
-    let sum: Int
+struct RegistrationResponseModel: Codable {
+    var user: User
+    var version: String
+    var token: String
+    var platform: String
 }

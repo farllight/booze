@@ -14,8 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window?.makeKeyAndVisible()
-        window?.rootViewController = MainTabBarController()
-                
+
+        if UserSessionTracker.shared.isAuth() {
+            window?.rootViewController = MainTabBarController()
+        } else {
+            window?.rootViewController = UINavigationController(rootViewController: AuthVC.storyboardInstance())
+        } 
+        
         return true 
     }
 }
