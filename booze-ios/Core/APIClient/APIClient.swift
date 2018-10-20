@@ -52,7 +52,7 @@ class APIClient {
     }
     
     func getUser(userId: Int, completion: @escaping Completion) {
-        let fullUrl = baseUrl + "user-get/\(userId)"
+        let fullUrl = baseUrl + "user/\(userId)"
         Alamofire.request(fullUrl, method: .get, parameters: nil, encoding: JSONEncoding(), headers: ["apikey": UserSessionTracker.shared.token]).responseJSON { (data) in
             completion(data.data ?? Data())
         }

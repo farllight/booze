@@ -18,11 +18,11 @@ class BooziesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupUI()
-    }
-    
-    private func setupUI() {
         accessoryType = .disclosureIndicator
         boozeImageView.roundImageView()
+    }
+    
+    func setupUI(party: Party) {
+        boozeNameLabel.text = party.name
     }
 }
