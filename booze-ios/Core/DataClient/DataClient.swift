@@ -32,6 +32,7 @@ class DataClient {
         APIClient.shared.login(phone: phone, password: password) { (data, error) in
             if error != nil {
                 completion(false)
+                return
             }
             
             do {
@@ -50,6 +51,7 @@ class DataClient {
         APIClient.shared.getUser(userId: currentUserId) { (data, error) in
             if error != nil {
                 completion(nil)
+                return
             }
             
             do {
@@ -68,6 +70,134 @@ class DataClient {
                 completion(true)
             } else {
                 completion(false)
+            }
+        }
+    }
+    
+    func getAllParties(completion: @escaping ([Party]?) -> Void) {
+        APIClient.shared.getAllParties { (data, error) in
+            if error != nil {
+                completion(nil)
+                return
+            }
+            
+            do {
+                let parties = try JSONDecoder().decode([Party].self, from: data)
+                completion(parties)
+            } catch {
+                print(error)
+                completion(nil)
+            }
+        }
+    }
+    
+    func getParty(partyId: String, completion: @escaping (Party?) -> Void) {
+        APIClient.shared.getParty(partyId: partyId) { (data, error) in
+            if error != nil {
+                completion(nil)
+                return
+            }
+            
+            do {
+                let party = try JSONDecoder().decode(Party.self, from: data)
+                completion(party)
+            } catch {
+                print(error)
+                completion(nil)
+            }
+        }
+    }
+    
+    func updateParty(partyId: String, party: Party, completion: @escaping (Party?) -> Void) {
+        APIClient.shared.updateParty(partyId: partyId, party: party) { (data, error) in
+            if error != nil {
+                completion(nil)
+                return
+            }
+            
+            do {
+                let party = try JSONDecoder().decode(Party.self, from: data)
+                completion(party)
+            } catch {
+                print(error)
+                completion(nil)
+            }
+        }
+    }
+    
+    func getAppUsers(completion: @escaping ([Party]?) -> Void) {
+        APIClient.shared.getAllUsers { (data, error) in
+            if error != nil {
+                completion(nil)
+                return
+            }
+            
+            do {
+                let patients = try JSONDecoder().decode([Party].self, from: data)
+                completion(patients)
+            } catch { 
+                print(error)
+                completion(nil)
+            }
+        }
+    }
+    
+    func getAllTransactions(completion: @escaping ([Transaction]?) -> Void ) {
+        APIClient.shared.getAllParties { (data, error) in
+            if error != nil {
+                completion(nil)
+                return
+            }
+            
+            do {
+                let transactions = try JSONDecoder().decode([Transaction].self, from: data)
+                completion(transactions)
+            } catch {
+                print(error)
+                completion(nil)
+            }
+        }
+    }
+    
+    func getTransaction(id: String, completion: @escaping (Transaction?) -> Void) {
+        APIClient.shared.getTransaction(id: id) { (data, error) in
+            if error != nil {
+                completion(nil)
+                return
+            }
+            
+            do {
+                let transaction = try JSONDecoder().decode(Transaction.self, from: data)
+                completion(transaction)
+            } catch {
+                print(error)
+                completion(nil)
+            }
+        }
+    }
+    
+    func setTransaction(transaction: Transaction, completion: @escaping IsSuccessCompletion) {
+        APIClient.shared.setTransaction(transaction: transaction) { (data, error) in
+            if error != nil {
+                completion(false)
+            } else {
+                completion(true)
+            }
+        }
+    }
+    
+    func updateTransaction(id: String, transaction: Transaction, completion: @escaping (Transaction?) -> Void) {
+        APIClient.shared.updateTransaction(id: id, transaction: transaction) { (data, error) in
+            if (error != nil) {
+                completion(nil)
+            }
+            
+            do {
+                let tranasactiin = try JSONDecoder().decode(Transaction.self, from: data) 
+                completion(tranasactiin)
+            } catch {
+                print(error)
+                completion(nil)
             }
         }
     }

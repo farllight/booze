@@ -65,4 +65,43 @@ class APIClient {
     func setParty(party: Party, completion: @escaping Completion) {
         baseRequest(path: "party/", method: .post, params: party.toDictionary(), headers: ["Content-Type" : "application/json", "apikey": authToken], completion: completion)
     }
+    
+    func getAllParties(completion: @escaping Completion) {
+        baseRequest(path: "party/", method: .get, params: nil, headers: ["apikey": authToken], completion: completion)
+    }
+    
+    func getParty(partyId: String, completion: @escaping Completion) {
+        baseRequest(path: "party/\(partyId)", method: .get, params: nil, headers: ["apikey": authToken], completion: completion)
+    }
+    
+    func updateParty(partyId: String, party: Party, completion: @escaping Completion) {
+        let params: [String: Any] = [
+            "id": partyId,
+            "name": party.name,
+            "date": party.date,
+            "users": party.users.map({ $0.toDictionary() })
+        ]
+        baseRequest(path: "party/", method: .patch, params: params, headers: ["Content-Type":"application/json", "apiKey": authToken], completion: completion)
+    }
+    
+    func getAllUsers(completion: @escaping Completion) {
+        baseRequest(path: "user/", method: .get, params: nil, headers: ["apikey": authToken], completion: completion)
+    }
+    
+    func getAllTransactions(completion: @escaping Completion) {
+        baseRequest(path: "transaction/", method: .get, params: nil, headers: ["apikey": authToken], completion: completion)
+    }
+    
+    func getTransaction(id: String, completion: @escaping Completion) {
+        baseRequest(path: "transaction/\(id)", method: .get, params: nil, headers: ["Content-Type": "application/json"], completion: completion)
+    }
+    
+    func setTransaction(transaction: Transaction, completion: @escaping Completion) {
+        baseRequest(path: "transaction/", method: .post, params: transaction.toDictionaryForRequest(), headers: ["Content-Type": "application/json", "apikey": authToken], completion: completion)
+    }
+    
+    func updateTransaction(id: String, transaction: Transaction, completion: @escaping Completion) {
+        let params = transaction.toDictionaryForRequest()  
+        baseRequest(path: "transaction/", method: .patch, params: params, headers: ["Content-Type": "application/json", ], completion: completion)
+    }
 }

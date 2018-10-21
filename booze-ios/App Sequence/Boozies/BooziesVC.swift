@@ -59,9 +59,17 @@ class BooziesVC: UIViewController {
     // MARK: - Load data
     private func loadData() {
         KVNProgress.show(withStatus: "Загрузка...")
-        DataClient.shared.getUser(currentUserId: UserSessionTracker.shared.currentUserId) { [weak self] (user) in
-            if let user = user {
-                self?.parties = user.parties
+//        DataClient.shared.getUser(currentUserId: UserSessionTracker.shared.currentUserId) { [weak self] (user) in
+//            if let user = user {
+//                self?.parties = user.parties
+//                KVNProgress.dismiss()
+//            } else {
+//                KVNProgress.showError()
+//            }
+//        }
+        DataClient.shared.getAllParties { [weak self] (parties) in
+            if let parties = parties {
+                self?.parties = parties
                 KVNProgress.dismiss()
             } else {
                 KVNProgress.showError()

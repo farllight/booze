@@ -25,6 +25,7 @@
 		765BFE2B217B6E9E00FE36EA /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE29217B6E9E00FE36EA /* ContactTableViewCell.swift */; };
 		765BFE2C217B6E9E00FE36EA /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765BFE2A217B6E9E00FE36EA /* ContactTableViewCell.xib */; };
 		765BFE2F217BB63100FE36EA /* String+DateStringToTimeStumpInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE2E217BB63100FE36EA /* String+DateStringToTimeStumpInt.swift */; };
+		765BFE31217BD58E00FE36EA /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE30217BD58E00FE36EA /* Transaction.swift */; };
 		76EC977B217A4CB600A50261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC977A217A4CB600A50261 /* AppDelegate.swift */; };
 		76EC9782217A4CB700A50261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9781217A4CB700A50261 /* Assets.xcassets */; };
 		76EC9785217A4CB700A50261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9783217A4CB700A50261 /* LaunchScreen.storyboard */; };
@@ -94,6 +95,7 @@
 		765BFE2A217B6E9E00FE36EA /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
 		765BFE2D217B7AFE00FE36EA /* booze-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "booze-ios.entitlements"; sourceTree = "<group>"; };
 		765BFE2E217BB63100FE36EA /* String+DateStringToTimeStumpInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateStringToTimeStumpInt.swift"; sourceTree = "<group>"; };
+		765BFE30217BD58E00FE36EA /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		76EC9777217A4CB600A50261 /* booze-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "booze-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EC977A217A4CB600A50261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76EC9781217A4CB700A50261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -479,6 +481,7 @@
 				76EC9813217AE24B00A50261 /* User.swift */,
 				76EC9818217AED7000A50261 /* Party.swift */,
 				765BFE00217B489400FE36EA /* Contact.swift */,
+				765BFE30217BD58E00FE36EA /* Transaction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -688,6 +691,7 @@
 				76EC9808217AD10C00A50261 /* UserSessionTracker.swift in Sources */,
 				76EC9819217AED7000A50261 /* Party.swift in Sources */,
 				76EC9802217AB8DD00A50261 /* ProfileExitTableViewCell.swift in Sources */,
+				765BFE31217BD58E00FE36EA /* Transaction.swift in Sources */,
 				76EC9822217B216800A50261 /* Array+CountToHumanString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
