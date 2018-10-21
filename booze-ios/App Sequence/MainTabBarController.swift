@@ -30,7 +30,7 @@ class MainTabBarController: UITabBarController {
     
     private func addBoozies() -> UIViewController {
         let vc = BooziesVC.storyboardInstance()
-        vc.tabBarItem.title = "Пьянки"
+        vc.tabBarItem.title = "Вечеринки"
         vc.tabBarItem.image = ImageResources.shared.champagne
         
         return UINavigationController(rootViewController: vc)

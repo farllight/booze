@@ -79,7 +79,7 @@ class APIClient {
             "id": partyId,
             "name": party.name,
             "date": party.date,
-            "users": party.users.map({ $0.toDictionary() })
+            "users": party.users!.map({ $0.toDictionary() })  
         ]
         baseRequest(path: "party/", method: .patch, params: params, headers: ["Content-Type":"application/json", "apiKey": authToken], completion: completion)
     }

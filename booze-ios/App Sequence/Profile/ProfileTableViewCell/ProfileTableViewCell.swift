@@ -13,7 +13,6 @@ class ProfileTableViewCell: UITableViewCell {
     static let reuseId = "ProfileTableViewCellReuseId"
     
     @IBOutlet weak var ibNameLabel: UILabel!
-    @IBOutlet weak var ibCountLabel: UILabel!
     @IBOutlet weak var ibSumLabel: UILabel!
     @IBOutlet weak var ibTopBorderView: UIView!
     @IBOutlet weak var ibBottomBorderView: UIView!
@@ -27,7 +26,7 @@ class ProfileTableViewCell: UITableViewCell {
     
     func setup(model: ProfileTableViewCellModel) {
         ibNameLabel.text = model.name
-        ibCountLabel.text = "\(model.count)"
         ibSumLabel.text = "\(model.sum)"
+        ibSumLabel.textColor = UIColor.green
     } 
 }

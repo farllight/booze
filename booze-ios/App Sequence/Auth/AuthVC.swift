@@ -30,6 +30,12 @@ class AuthVC: UIViewController {
     
     // MARK: - Setup UI
     private func setupUI() {
+        title = "Вход"
+        setupColors()
+        setupNavigationBar()
+    }
+    
+    private func setupColors() {
         view.backgroundColor = ColorResources.shared.mainThemeColor
         ibPhoneTitleLabel.textColor = .white
         ibPhoneTextField.textColor = .white

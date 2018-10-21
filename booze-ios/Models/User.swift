@@ -8,23 +8,40 @@
 
 import UIKit
 
-struct User: Codable {  
+struct User: Codable {
+    var wasted: Int
     var id: Int
     var surname: String?
     var name: String?
-    var parties: [Party]
+    var parties: [Party]?
     var avatar: String?
-    var balance: Double?
-//    var phone: String?
+    var balance: Double
+    var phone: String
+    var transactions: [Transaction]?
     
     func toDictionary() -> [String: Any] {
         return [
             "id": id,
             "surname": surname as Any,
             "name": name as Any,
-            "parties": parties.map({ $0.toDictionary() }),
+            "parties": parties!.map({ $0.toDictionary() }),
             "avatar": avatar as Any,
             "balance": balance as Any
         ]
+    }
+    
+    func fullName() -> String {
+        return "\(name ?? "") + \(surname ?? "")"
+    }
+    
+    static func empty() -> User {
+//        return User(id: 0,
+//                    surname: "",
+//                    name: "",
+//                    parties: [],
+//                    avatar: "",
+//                    balance: 0,
+//                    phone: "")
+        return User(wasted: 0, id: 0, surname: "", name: "", parties: [], avatar: "", balance: 0, phone: "", transactions: [])
     }
 }

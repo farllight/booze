@@ -14,12 +14,7 @@ struct Contact: Hashable {
     let surname: String?
     
     func toUser() -> User {
-        return User(id: 0,
-                    surname: surname,
-                    name: name,
-                    parties: [],
-                    avatar: "",
-                    balance: 0)
+        return User(wasted: 0, id: 0, surname: surname, name: name, parties: [], avatar: "", balance: 0, phone: phone, transactions: [])
     }
     
     func toDictionary() -> [String: Any] {

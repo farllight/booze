@@ -30,7 +30,7 @@ class BooziesVC: UIViewController {
 
     // MARK: - Setup UI
     private func setupUI() {
-        title = "Пьянки"
+        title = "Вечеринки"
         setupBooziesTableView()
         setupRightBarButtonItem()
         setupNavigationBar()

@@ -11,15 +11,15 @@ import UIKit
 struct Party: Codable {
     var name: String
     var date: Int
-    var users: [User]
-    var transactions: [Transaction]
+    var users: [User]?
+    var transactions: [Transaction]?
     
     func toDictionary() -> [String: Any] {
         return [
             "name": name,
             "date": date,
-            "users": users.map({ $0.toDictionary() }),
-            "tranactions": transactions.map({ $0.toDictionaryForRequest() })
+            "users": users!.map({ $0.toDictionary() }),
+            "tranactions": transactions!.map({ $0.toDictionaryForRequest() })
         ]
     }
     

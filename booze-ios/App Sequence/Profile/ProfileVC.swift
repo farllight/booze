@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import KVNProgress
 
 class ProfileVC: UIViewController {
     @IBOutlet weak var ibProfileTableView: UITableView!
     
     private var menuSections = [ProfileTableViewCellModel]()
+    private var user = User.empty()
     
     // MARK: - Initialize
     static func storyboardInstance() -> UIViewController {
@@ -51,11 +53,22 @@ class ProfileVC: UIViewController {
     
     // MARK: - Load data
     private func loadDataForMenu() {
-        // TODO: - Load profile data
-        menuSections = [
-            ProfileTableViewCellModel(name: "Должники", count: 9, sum: 4500),
-            ProfileTableViewCellModel(name: "Я должен", count: 9, sum: 4500),
-        ]
+        KVNProgress.show()
+        
+        DataClient.shared.getUser(currentUserId: UserSessionTracker.shared.currentUserId) { [weak self] (user) in
+            if let user = user {
+                self?.user = user
+                
+                self?.menuSections = [
+                    ProfileTableViewCellModel(name: "Вы пропили: ", count: 0, sum: user.wasted),
+                ]
+                self?.ibProfileTableView.reloadData()
+                KVNProgress.dismiss()
+            } else {
+                KVNProgress.showError()
+            }
+        }
+        
     }
 }
 
@@ -79,6 +92,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: ProfileUserTableViewCell.reuseId, for: indexPath) as! ProfileUserTableViewCell
+            cell.setup(user: user)
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: ProfileSwitchTableViewCell.reuseId, for: indexPath) as! ProfileSwitchTableViewCell
