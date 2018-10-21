@@ -62,7 +62,7 @@ class APIClient {
         baseRequest(path: "user/\(userId)", method: .get, params: nil, headers: ["apikey": authToken], completion: completion)
     }
     
-    func setParty(party: Party, completion: @escaping Completion) {
+    func setParty(party: PartyRequestModel, completion: @escaping Completion) {
         baseRequest(path: "party/", method: .post, params: party.toDictionary(), headers: ["Content-Type" : "application/json", "apikey": authToken], completion: completion)
     }
     

@@ -14,6 +14,7 @@ class AddBoozeVC: UIViewController {
     
     private var addBoozeRightBarButtonItem = UIBarButtonItem()
     private var users = [User]()
+    private var contants = [Contact]()
     private var name = ""
     private var date = 0
     
@@ -58,7 +59,8 @@ class AddBoozeVC: UIViewController {
     // MARK: - Actions
     @objc private func rightBarButtonItemTouched() {
         KVNProgress.show()
-        DataClient.shared.setParty(party: Party(name: name, date: date, users: users)) { (isSuccess) in
+        let party = PartyRequestModel(name: name, date: date, contacts: contants)
+        DataClient.shared.setParty(party: party) { (isSuccess) in
             if isSuccess {
                 KVNProgress.dismiss()
             } else {
@@ -135,6 +137,7 @@ extension AddBoozeVC: AddBoozeInviteTableViewCellDelegate {
 extension AddBoozeVC: ContactVCDelegate {
     func readyBarButtonTouched(users: [Contact]) {
         self.users = users.map({ $0.toUser() })
+        self.contants = users
         ibAddBoozeTableView.reloadData()
         navigationController?.popViewController(animated: true)
     }

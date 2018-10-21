@@ -59,17 +59,10 @@ class BooziesVC: UIViewController {
     // MARK: - Load data
     private func loadData() {
         KVNProgress.show(withStatus: "Загрузка...")
-//        DataClient.shared.getUser(currentUserId: UserSessionTracker.shared.currentUserId) { [weak self] (user) in
-//            if let user = user {
-//                self?.parties = user.parties
-//                KVNProgress.dismiss()
-//            } else {
-//                KVNProgress.showError()
-//            }
-//        }
         DataClient.shared.getAllParties { [weak self] (parties) in
             if let parties = parties {
                 self?.parties = parties
+                self?.ibBooziesTableView.reloadData()
                 KVNProgress.dismiss()
             } else {
                 KVNProgress.showError()
@@ -88,5 +81,12 @@ extension BooziesVC: UITableViewDelegate, UITableViewDataSource {
         cell.setupUI(party: parties[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = BoozeVC.storyboardInstance()
+        vc.party = parties[indexPath.row]
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

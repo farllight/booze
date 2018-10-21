@@ -20,6 +20,12 @@ struct Contact: Hashable {
                     parties: [],
                     avatar: "",
                     balance: 0)
-//                    phone: phone)
+    }
+    
+    func toDictionary() -> [String: Any] {
+        return [
+            "phone": phone,
+            "name": (name ?? "")
+        ]
     }
 }

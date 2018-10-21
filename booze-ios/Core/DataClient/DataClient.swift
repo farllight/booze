@@ -64,7 +64,7 @@ class DataClient {
         }
     }
     
-    func setParty(party: Party, completion: @escaping IsSuccessCompletion) {
+    func setParty(party: PartyRequestModel, completion: @escaping IsSuccessCompletion) {
         APIClient.shared.setParty(party: party) { (data, error) in
             if error == nil {
                 completion(true)

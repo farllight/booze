@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="liV-Xh-Kwn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BoozeVC-->
+        <scene sceneID="ctq-XS-WUJ">
+            <objects>
+                <viewController id="liV-Xh-Kwn" customClass="BoozeVC" customModule="booze_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wy7-Pw-52T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DZj-3j-CsY">
+                                <rect key="frame" x="16" y="36" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Пользователи"/>
+                                    <segment title="История"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedContorlerValueChanged:" destination="liV-Xh-Kwn" eventType="valueChanged" id="BDC-ge-UWo"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ngc-vf-MBb">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DZj-3j-CsY" firstAttribute="top" secondItem="ylb-FA-0TS" secondAttribute="top" constant="16" id="0y8-0Y-3UG"/>
+                            <constraint firstItem="ngc-vf-MBb" firstAttribute="top" secondItem="DZj-3j-CsY" secondAttribute="bottom" constant="16" id="7aJ-lW-aL4"/>
+                            <constraint firstItem="ylb-FA-0TS" firstAttribute="bottom" secondItem="ngc-vf-MBb" secondAttribute="bottom" id="UIV-9p-rRC"/>
+                            <constraint firstItem="ngc-vf-MBb" firstAttribute="leading" secondItem="ylb-FA-0TS" secondAttribute="leading" id="g95-rI-iHr"/>
+                            <constraint firstItem="ylb-FA-0TS" firstAttribute="trailing" secondItem="ngc-vf-MBb" secondAttribute="trailing" id="iAL-vw-yb8"/>
+                            <constraint firstItem="DZj-3j-CsY" firstAttribute="leading" secondItem="ylb-FA-0TS" secondAttribute="leading" constant="16" id="jlJ-Zt-Jm8"/>
+                            <constraint firstItem="ylb-FA-0TS" firstAttribute="trailing" secondItem="DZj-3j-CsY" secondAttribute="trailing" constant="16" id="q7I-1z-ruA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ylb-FA-0TS"/>
+                    </view>
+                    <connections>
+                        <outlet property="ibSegmentedControl" destination="DZj-3j-CsY" id="4Ep-2c-iCs"/>
+                        <outlet property="ibTableView" destination="ngc-vf-MBb" id="OEV-MS-hyZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qVL-9b-Tht" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="124"/>
+        </scene>
+    </scenes>
+</document>

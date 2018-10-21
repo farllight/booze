@@ -5,5 +5,6 @@ target 'booze-ios' do
   pod 'Alamofire'
   pod 'Eureka'
   pod 'KVNProgress'
+  pod 'SDWebImage'
 
 end

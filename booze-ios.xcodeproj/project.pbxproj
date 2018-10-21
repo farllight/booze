@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2181B3C41916C3C1052F5F /* Pods_booze_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF39E7145F0BA595FA75EA7 /* Pods_booze_ios.framework */; };
 		765BFE01217B489400FE36EA /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE00217B489400FE36EA /* Contact.swift */; };
 		765BFE03217B4A1800FE36EA /* CNContact+ToCustomContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE02217B4A1800FE36EA /* CNContact+ToCustomContact.swift */; };
 		765BFE05217B4C2200FE36EA /* AddBooze.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765BFE04217B4C2200FE36EA /* AddBooze.storyboard */; };
@@ -26,6 +27,13 @@
 		765BFE2C217B6E9E00FE36EA /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765BFE2A217B6E9E00FE36EA /* ContactTableViewCell.xib */; };
 		765BFE2F217BB63100FE36EA /* String+DateStringToTimeStumpInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE2E217BB63100FE36EA /* String+DateStringToTimeStumpInt.swift */; };
 		765BFE31217BD58E00FE36EA /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE30217BD58E00FE36EA /* Transaction.swift */; };
+		765BFE35217C521C00FE36EA /* PartyRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE34217C521C00FE36EA /* PartyRequestModel.swift */; };
+		765BFE38217C57BA00FE36EA /* BoozeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE37217C57BA00FE36EA /* BoozeVC.swift */; };
+		765BFE3A217C57C700FE36EA /* Booze.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765BFE39217C57C700FE36EA /* Booze.storyboard */; };
+		765BFE40217C5D0800FE36EA /* BoozeUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE3E217C5D0800FE36EA /* BoozeUserTableViewCell.swift */; };
+		765BFE41217C5D0800FE36EA /* BoozeUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765BFE3F217C5D0800FE36EA /* BoozeUserTableViewCell.xib */; };
+		765BFE45217C6A3500FE36EA /* BoozeTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE43217C6A3500FE36EA /* BoozeTransactionTableViewCell.swift */; };
+		765BFE46217C6A3500FE36EA /* BoozeTransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765BFE44217C6A3500FE36EA /* BoozeTransactionTableViewCell.xib */; };
 		76EC977B217A4CB600A50261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC977A217A4CB600A50261 /* AppDelegate.swift */; };
 		76EC9782217A4CB700A50261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9781217A4CB700A50261 /* Assets.xcassets */; };
 		76EC9785217A4CB700A50261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9783217A4CB700A50261 /* LaunchScreen.storyboard */; };
@@ -72,10 +80,11 @@
 		76EC9822217B216800A50261 /* Array+CountToHumanString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC9821217B216800A50261 /* Array+CountToHumanString.swift */; };
 		76EC9824217B229800A50261 /* Int+TimeStumpToHumanDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC9823217B229800A50261 /* Int+TimeStumpToHumanDate.swift */; };
 		76EC9827217B30E900A50261 /* ContactsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC9826217B30E900A50261 /* ContactsClient.swift */; };
-		D3D371471BB20568914C2B2C /* Pods_booze_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF989F2650E439AD419CAA6 /* Pods_booze_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05F6AE5A0F6699E75421B2C3 /* Pods-booze-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		457F2E7944DA7402D4182466 /* Pods-booze-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.release.xcconfig"; sourceTree = "<group>"; };
 		765BFE00217B489400FE36EA /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		765BFE02217B4A1800FE36EA /* CNContact+ToCustomContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CNContact+ToCustomContact.swift"; sourceTree = "<group>"; };
 		765BFE04217B4C2200FE36EA /* AddBooze.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddBooze.storyboard; sourceTree = "<group>"; };
@@ -96,6 +105,13 @@
 		765BFE2D217B7AFE00FE36EA /* booze-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "booze-ios.entitlements"; sourceTree = "<group>"; };
 		765BFE2E217BB63100FE36EA /* String+DateStringToTimeStumpInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateStringToTimeStumpInt.swift"; sourceTree = "<group>"; };
 		765BFE30217BD58E00FE36EA /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		765BFE34217C521C00FE36EA /* PartyRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyRequestModel.swift; sourceTree = "<group>"; };
+		765BFE37217C57BA00FE36EA /* BoozeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoozeVC.swift; sourceTree = "<group>"; };
+		765BFE39217C57C700FE36EA /* Booze.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Booze.storyboard; sourceTree = "<group>"; };
+		765BFE3E217C5D0800FE36EA /* BoozeUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoozeUserTableViewCell.swift; sourceTree = "<group>"; };
+		765BFE3F217C5D0800FE36EA /* BoozeUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoozeUserTableViewCell.xib; sourceTree = "<group>"; };
+		765BFE43217C6A3500FE36EA /* BoozeTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoozeTransactionTableViewCell.swift; sourceTree = "<group>"; };
+		765BFE44217C6A3500FE36EA /* BoozeTransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoozeTransactionTableViewCell.xib; sourceTree = "<group>"; };
 		76EC9777217A4CB600A50261 /* booze-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "booze-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EC977A217A4CB600A50261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76EC9781217A4CB700A50261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,9 +160,7 @@
 		76EC9821217B216800A50261 /* Array+CountToHumanString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+CountToHumanString.swift"; sourceTree = "<group>"; };
 		76EC9823217B229800A50261 /* Int+TimeStumpToHumanDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+TimeStumpToHumanDate.swift"; sourceTree = "<group>"; };
 		76EC9826217B30E900A50261 /* ContactsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsClient.swift; sourceTree = "<group>"; };
-		AD13D1649537914FD1B1416E /* Pods-booze-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.release.xcconfig"; sourceTree = "<group>"; };
-		B212AF6F17EA9C0625FA80FF /* Pods-booze-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booze-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		CEF989F2650E439AD419CAA6 /* Pods_booze_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_booze_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF39E7145F0BA595FA75EA7 /* Pods_booze_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_booze_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,26 +168,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3D371471BB20568914C2B2C /* Pods_booze_ios.framework in Frameworks */,
+				3F2181B3C41916C3C1052F5F /* Pods_booze_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		085548EFCC010195B95AD4C4 /* Pods */ = {
+		113A79F5C7AF51A34F10B084 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B212AF6F17EA9C0625FA80FF /* Pods-booze-ios.debug.xcconfig */,
-				AD13D1649537914FD1B1416E /* Pods-booze-ios.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		71269DFDA23DCC9BB8039337 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CEF989F2650E439AD419CAA6 /* Pods_booze_ios.framework */,
+				AAF39E7145F0BA595FA75EA7 /* Pods_booze_ios.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -245,13 +250,42 @@
 			path = ContactTableViewCell;
 			sourceTree = "<group>";
 		};
+		765BFE36217C579B00FE36EA /* Booze */ = {
+			isa = PBXGroup;
+			children = (
+				765BFE42217C6A1100FE36EA /* BoozeTransactionTableViewCell */,
+				765BFE3B217C5CB700FE36EA /* BoozeUserTableViewCell */,
+				765BFE37217C57BA00FE36EA /* BoozeVC.swift */,
+				765BFE39217C57C700FE36EA /* Booze.storyboard */,
+			);
+			path = Booze;
+			sourceTree = "<group>";
+		};
+		765BFE3B217C5CB700FE36EA /* BoozeUserTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				765BFE3E217C5D0800FE36EA /* BoozeUserTableViewCell.swift */,
+				765BFE3F217C5D0800FE36EA /* BoozeUserTableViewCell.xib */,
+			);
+			path = BoozeUserTableViewCell;
+			sourceTree = "<group>";
+		};
+		765BFE42217C6A1100FE36EA /* BoozeTransactionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				765BFE43217C6A3500FE36EA /* BoozeTransactionTableViewCell.swift */,
+				765BFE44217C6A3500FE36EA /* BoozeTransactionTableViewCell.xib */,
+			);
+			path = BoozeTransactionTableViewCell;
+			sourceTree = "<group>";
+		};
 		76EC976E217A4CB500A50261 = {
 			isa = PBXGroup;
 			children = (
 				76EC9779217A4CB600A50261 /* booze-ios */,
 				76EC9778217A4CB600A50261 /* Products */,
-				085548EFCC010195B95AD4C4 /* Pods */,
-				71269DFDA23DCC9BB8039337 /* Frameworks */,
+				81014BB5712D7F61DC4FDB39 /* Pods */,
+				113A79F5C7AF51A34F10B084 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -297,6 +331,7 @@
 		76EC978F217A4FC700A50261 /* Boozies */ = {
 			isa = PBXGroup;
 			children = (
+				765BFE36217C579B00FE36EA /* Booze */,
 				76EC97A9217A6ADE00A50261 /* AddBooze */,
 				76EC979E217A5D9100A50261 /* BooziesTableViewCell */,
 				76EC9791217A51EC00A50261 /* Boozies.storyboard */,
@@ -471,6 +506,7 @@
 			isa = PBXGroup;
 			children = (
 				76EC9816217AE44400A50261 /* RegistrationResponseModel.swift */,
+				765BFE34217C521C00FE36EA /* PartyRequestModel.swift */,
 			);
 			path = DataClientModels;
 			sourceTree = "<group>";
@@ -502,6 +538,15 @@
 			path = ContactClient;
 			sourceTree = "<group>";
 		};
+		81014BB5712D7F61DC4FDB39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05F6AE5A0F6699E75421B2C3 /* Pods-booze-ios.debug.xcconfig */,
+				457F2E7944DA7402D4182466 /* Pods-booze-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -509,11 +554,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76EC9789217A4CB700A50261 /* Build configuration list for PBXNativeTarget "booze-ios" */;
 			buildPhases = (
-				72FD14F5F3F77F0D6081C451 /* [CP] Check Pods Manifest.lock */,
+				4B71AA07B68AF5C586993787 /* [CP] Check Pods Manifest.lock */,
 				76EC9773217A4CB600A50261 /* Sources */,
 				76EC9774217A4CB600A50261 /* Frameworks */,
 				76EC9775217A4CB600A50261 /* Resources */,
-				41D480C67630EB2698490818 /* [CP] Embed Pods Frameworks */,
+				2A388B401E5F4AC476E41BBB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -573,6 +618,7 @@
 				76EC9785217A4CB700A50261 /* LaunchScreen.storyboard in Resources */,
 				76EC9782217A4CB700A50261 /* Assets.xcassets in Resources */,
 				76EC9799217A552C00A50261 /* Profile.storyboard in Resources */,
+				765BFE41217C5D0800FE36EA /* BoozeUserTableViewCell.xib in Resources */,
 				76EC97E5217AA7EF00A50261 /* Roboto-Medium.ttf in Resources */,
 				765BFE0A217B4E3400FE36EA /* AddBoozeTableViewCell.xib in Resources */,
 				765BFE21217B6C8100FE36EA /* Contacts.storyboard in Resources */,
@@ -582,12 +628,14 @@
 				76EC97E8217AA7EF00A50261 /* Roboto-Light.ttf in Resources */,
 				76EC97A2217A5DC600A50261 /* BooziesTableViewCell.xib in Resources */,
 				765BFE05217B4C2200FE36EA /* AddBooze.storyboard in Resources */,
+				765BFE3A217C57C700FE36EA /* Booze.storyboard in Resources */,
 				76EC97E6217AA7EF00A50261 /* Roboto-Black.ttf in Resources */,
 				765BFE1D217B665300FE36EA /* AddBoozeInviteTableViewCell.xib in Resources */,
 				76EC97E2217AA7EF00A50261 /* Roboto-Regular.ttf in Resources */,
 				76EC97E3217AA7EF00A50261 /* Roboto-Bold.ttf in Resources */,
 				76EC97FC217AB41100A50261 /* ProfileTableViewCell.xib in Resources */,
 				76EC9803217AB8DD00A50261 /* ProfileExitTableViewCell.xib in Resources */,
+				765BFE46217C6A3500FE36EA /* BoozeTransactionTableViewCell.xib in Resources */,
 				76EC97C4217A94C200A50261 /* Auth.storyboard in Resources */,
 				76EC97EF217AAF6700A50261 /* ProfileUserTableViewCell.xib in Resources */,
 				765BFE18217B61EA00FE36EA /* AddBoozeHeaderTableView.xib in Resources */,
@@ -597,7 +645,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		41D480C67630EB2698490818 /* [CP] Embed Pods Frameworks */ = {
+		2A388B401E5F4AC476E41BBB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -609,6 +657,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/KVNProgress/KVNProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -617,13 +666,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVNProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		72FD14F5F3F77F0D6081C451 /* [CP] Check Pods Manifest.lock */ = {
+		4B71AA07B68AF5C586993787 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -662,8 +712,10 @@
 				76EC97BF217A82E700A50261 /* UIImageView+CustomRoundImageView.swift in Sources */,
 				76EC9827217B30E900A50261 /* ContactsClient.swift in Sources */,
 				76EC97F6217AB27200A50261 /* ProfileSwitchTableViewCell.swift in Sources */,
+				765BFE45217C6A3500FE36EA /* BoozeTransactionTableViewCell.swift in Sources */,
 				765BFE16217B61CF00FE36EA /* AddBoozeHeaderTableView.swift in Sources */,
 				76EC979D217A5CB500A50261 /* ColorResources.swift in Sources */,
+				765BFE40217C5D0800FE36EA /* BoozeUserTableViewCell.swift in Sources */,
 				76EC9794217A521300A50261 /* BooziesVC.swift in Sources */,
 				76EC9811217ADD0C00A50261 /* DataClient.swift in Sources */,
 				76EC97C6217A94FB00A50261 /* AuthVC.swift in Sources */,
@@ -675,6 +727,7 @@
 				76EC97AE217A766B00A50261 /* UIViewController+CustomNavigationBar.swift in Sources */,
 				765BFE2F217BB63100FE36EA /* String+DateStringToTimeStumpInt.swift in Sources */,
 				76EC9797217A54B900A50261 /* ImageResources.swift in Sources */,
+				765BFE38217C57BA00FE36EA /* BoozeVC.swift in Sources */,
 				76EC97F0217AAF6700A50261 /* ProfileUserTableViewCell.swift in Sources */,
 				76EC97FB217AB41100A50261 /* ProfileTableViewCell.swift in Sources */,
 				76EC97A1217A5DC600A50261 /* BooziesTableViewCell.swift in Sources */,
@@ -684,6 +737,7 @@
 				765BFE0C217B50BB00FE36EA /* AddBoozeTableViewCellModel.swift in Sources */,
 				76EC981E217AFD6C00A50261 /* AppRouter.swift in Sources */,
 				765BFE1C217B665300FE36EA /* AddBoozeInviteTableViewCell.swift in Sources */,
+				765BFE35217C521C00FE36EA /* PartyRequestModel.swift in Sources */,
 				76EC9817217AE44400A50261 /* RegistrationResponseModel.swift in Sources */,
 				76EC9824217B229800A50261 /* Int+TimeStumpToHumanDate.swift in Sources */,
 				76EC97CD217AA2BE00A50261 /* CodeConformitionVC.swift in Sources */,
@@ -828,7 +882,7 @@
 		};
 		76EC978A217A4CB700A50261 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B212AF6F17EA9C0625FA80FF /* Pods-booze-ios.debug.xcconfig */;
+			baseConfigurationReference = 05F6AE5A0F6699E75421B2C3 /* Pods-booze-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "booze-ios/booze-ios.entitlements";
@@ -849,7 +903,7 @@
 		};
 		76EC978B217A4CB700A50261 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD13D1649537914FD1B1416E /* Pods-booze-ios.release.xcconfig */;
+			baseConfigurationReference = 457F2E7944DA7402D4182466 /* Pods-booze-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "booze-ios/booze-ios.entitlements";
