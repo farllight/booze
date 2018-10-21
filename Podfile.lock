@@ -2,6 +2,24 @@ PODS:
   - Alamofire (4.7.3)
   - Eureka (4.3.0)
   - KVNProgress (2.3.1)
+  - MaterialComponents/BottomSheet (66.0.0):
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/ShapeLibrary
+    - MaterialComponents/private/Shapes
+  - MaterialComponents/private/Application (66.0.0)
+  - MaterialComponents/private/KeyboardWatcher (66.0.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Math (66.0.0)
+  - MaterialComponents/private/ShapeLibrary (66.0.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/Shapes
+  - MaterialComponents/private/Shapes (66.0.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/ShadowElevations (66.0.0)
+  - MaterialComponents/ShadowLayer (66.0.0):
+    - MaterialComponents/ShadowElevations
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
@@ -10,6 +28,7 @@ DEPENDENCIES:
   - Alamofire
   - Eureka
   - KVNProgress
+  - MaterialComponents/BottomSheet
   - SDWebImage
 
 SPEC REPOS:
@@ -17,14 +36,16 @@ SPEC REPOS:
     - Alamofire
     - Eureka
     - KVNProgress
+    - MaterialComponents
     - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Eureka: 6d711cb30ca333b4bc893110285a722ae3840114
   KVNProgress: 8167b1f19e2758290c0b6143020ed9dcbb0477a1
+  MaterialComponents: 2b92bfea789f775ddb5a7060aec9edb8f7bb971b
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: f67bcd52f6a6deff664a369cf63b796be9fc12a9
+PODFILE CHECKSUM: 812c789ea5d86fe240a2d66f85ee3db4734a4119
 
 COCOAPODS: 1.5.3

@@ -24,11 +24,12 @@ class ProfileUserTableViewCell: UITableViewCell {
         ibAvatarImageView.roundImageView()
         ibTopBorderView.backgroundColor = ColorResources.shared.cellProfileBorderColor
         ibBottomBorderView.backgroundColor = ColorResources.shared.cellProfileBorderColor
+        selectionStyle = .none
     }
     
     func setup(user: User) {
         ibAvatarImageView.sd_setImage(with: URL(string: user.avatar ?? ""), placeholderImage: ImageResources.shared.profileAvatarMock)
         ibNameLabel.text = user.fullName()
-        ibPhoneLabel.text = user.phone ?? ""
+        ibPhoneLabel.text = user.phone
     }
 }

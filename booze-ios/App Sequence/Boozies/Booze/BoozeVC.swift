@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import KVNProgress
+import MaterialComponents
 
 enum BoozeVCState: Int {
     case users
@@ -16,6 +18,8 @@ enum BoozeVCState: Int {
 class BoozeVC: UIViewController {
     @IBOutlet weak var ibSegmentedControl: UISegmentedControl!
     @IBOutlet weak var ibTableView: UITableView!
+    
+    private var addBarButtonItem = UIBarButtonItem()
     
     var party = Party.empty()
     private var state = BoozeVCState.users
@@ -38,6 +42,7 @@ class BoozeVC: UIViewController {
         setupTable()
         setupSegmentedControl()
         setupNavigationBar()
+        setupAddBarButtonItem()
     }
     
     private func setupTable() {
@@ -53,10 +58,42 @@ class BoozeVC: UIViewController {
         ibSegmentedControl.tintColor = ColorResources.shared.mainThemeColor
     }
     
+    private func setupAddBarButtonItem() {
+        addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+                                           target: self,
+                                           action: #selector(addBarButtonItemTouched))
+        navigationItem.rightBarButtonItem = addBarButtonItem
+    }
+    
     // MARK: - Actions
     @IBAction func segmentedContorlerValueChanged(_ sender: UISegmentedControl) {
         state = BoozeVCState(rawValue: sender.selectedSegmentIndex) ?? .users
         ibTableView.reloadData()
+    }
+    
+    @objc private func addBarButtonItemTouched() {
+        let alertController = UIAlertController(title: "Добавение", message: "", preferredStyle: .actionSheet)
+        
+        alertController.addAction(UIAlertAction(title: "Добавить пользователя",
+                                                style: .default,
+                                                handler: { [weak self] (action) in
+            let vc = ContactsVC.storyboardInstance()
+            vc.delegate = self
+    
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "Добавить транзакцию",
+                                                style: .default,
+                                                handler: { [weak self] (action) in
+                let vc  = AddTransactionVC.storyboardInstance()
+                vc.party = self?.party ?? Party.empty()
+                self?.present(MDCBottomSheetController(contentViewController: vc), animated: true, completion: nil)
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
+        
+        present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -66,7 +103,7 @@ extension BoozeVC: UITableViewDelegate, UITableViewDataSource {
         
         switch state {
         case .users:
-            numberOfRows = party.users!.count
+            numberOfRows = party.users.count
         case .history:
             numberOfRows = party.transactions!.count
         }
@@ -78,7 +115,7 @@ extension BoozeVC: UITableViewDelegate, UITableViewDataSource {
         switch state {
         case .users:
             let cell = tableView.dequeueReusableCell(withIdentifier: BoozeUserTableViewCell.reuseId, for: indexPath) as! BoozeUserTableViewCell
-            cell.setup(user: party.users![indexPath.row])
+            cell.setup(user: party.users[indexPath.row])
             return cell
         case .history:
             let cell = tableView.dequeueReusableCell(withIdentifier: BoozeTransactionTableViewCell.reuseId, for: indexPath) as! BoozeTransactionTableViewCell
@@ -87,4 +124,22 @@ extension BoozeVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
     } 
+}
+
+extension BoozeVC: ContactVCDelegate {
+    func readyBarButtonTouched(users: [Contact]) {
+        party.users = users.map({  $0.toUser() })
+        
+        KVNProgress.show()
+        DataClient.shared.updateParty(partyId: party.id, party: party.toPartyRequestModel()) { [weak  self] (party) in
+            if let party = party {
+                self?.navigationController?.popViewController(animated: true)
+                self?.party = party
+                self?.ibTableView.reloadData()
+                KVNProgress.dismiss()
+            } else {
+                KVNProgress.showError()
+            }
+        }
+    }
 }

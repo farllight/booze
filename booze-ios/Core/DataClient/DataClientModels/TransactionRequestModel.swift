@@ -1,5 +1,5 @@
 //
-//  PartyRequestModel.swift
+//  TransactionRequestModel.swift
 //  booze-ios
 //
 //  Created by Владислав Марков on 21/10/2018.
@@ -8,16 +8,17 @@
 
 import UIKit
 
-struct PartyRequestModel {
-    var name: String
-    var date: Int
-    var users: [Contact]
+struct TransactionRequestModel {
+    let name: String
+    let sum: Int
+    let users: [User]
     
     func toDictionary() -> [String: Any] {
         return [
             "name": name,
-            "date": date,
-            "users": users.map({ $0.toDictionary() })
+            "sum": sum,
+//
+//            users: users.map({ return $0.toDictionary() })
         ]
     }
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomDatePicker" customModule="booze_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="523" height="257"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="SeU-bF-Zdr">
+                    <rect key="frame" x="0.0" y="46" width="523" height="211"/>
+                    <date key="date" timeIntervalSinceReferenceDate="561823395.48934901">
+                        <!--2018-10-21 14:03:15 +0000-->
+                    </date>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igY-EL-iEx">
+                    <rect key="frame" x="459" y="16" width="48" height="30"/>
+                    <state key="normal" title="Готово"/>
+                    <connections>
+                        <action selector="readyButtonTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="kWI-Ya-7KZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4t-ca-2Gm">
+                    <rect key="frame" x="16" y="16" width="56" height="30"/>
+                    <state key="normal" title="Отмена"/>
+                    <connections>
+                        <action selector="cancelButtnoTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="kOO-r7-4xB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SeU-bF-Zdr" secondAttribute="bottom" id="GGU-BH-VPf"/>
+                <constraint firstItem="igY-EL-iEx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="Gc3-he-CWb"/>
+                <constraint firstItem="t4t-ca-2Gm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="SxC-Ku-U9t"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="igY-EL-iEx" secondAttribute="trailing" constant="16" id="W6U-Lc-vT0"/>
+                <constraint firstItem="t4t-ca-2Gm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="Woy-AV-6vO"/>
+                <constraint firstItem="SeU-bF-Zdr" firstAttribute="top" secondItem="igY-EL-iEx" secondAttribute="bottom" id="bzx-RJ-A2T"/>
+                <constraint firstItem="SeU-bF-Zdr" firstAttribute="top" secondItem="t4t-ca-2Gm" secondAttribute="bottom" id="d58-5v-7aT"/>
+                <constraint firstItem="SeU-bF-Zdr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jJN-sa-3K4"/>
+                <constraint firstItem="SeU-bF-Zdr" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="uTp-WL-5wJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="ibCancelButton" destination="t4t-ca-2Gm" id="Hd3-Od-1ut"/>
+                <outlet property="ibDatePicker" destination="SeU-bF-Zdr" id="7bO-g2-FTe"/>
+                <outlet property="ibReadyButton" destination="igY-EL-iEx" id="mfs-m5-QTL"/>
+            </connections>
+            <point key="canvasLocation" x="256.80000000000001" y="-7.6461769115442282"/>
+        </view>
+    </objects>
+</document>

@@ -23,8 +23,8 @@ class AddBoozeUserTableViewCell: UITableViewCell {
     } 
     
     func setup(user: User) {
-        // TODO: - load images
         ibNameLabel.text = user.name ?? ""
-        // TODO: - load status
     }
+    
+    
 }

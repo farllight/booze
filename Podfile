@@ -6,5 +6,6 @@ target 'booze-ios' do
   pod 'Eureka'
   pod 'KVNProgress'
   pod 'SDWebImage'
+  pod 'MaterialComponents/BottomSheet'
 
 end

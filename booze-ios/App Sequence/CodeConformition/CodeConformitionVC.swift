@@ -18,6 +18,7 @@ class CodeConformitionVC: UIViewController {
     @IBOutlet weak var ibNotGetCodeButton: UIButton!
     
     var phone = ""
+    var name = ""
     
     // MARK: - Initialize
     static func storyboardInstance() -> CodeConformitionVC {
@@ -67,7 +68,7 @@ class CodeConformitionVC: UIViewController {
     
     @IBAction func notGetCodeButtonTouched(_ sender: Any) {
         KVNProgress.show(withStatus: "Загрузка...")
-        DataClient.shared.registration(phone: phone) { (isSuccess) in
+        DataClient.shared.registration(phone: phone, name: name) { (isSuccess) in
             KVNProgress.dismiss()
         }
     }

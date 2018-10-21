@@ -20,16 +20,17 @@ class BoozeUserTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         ibAvatarImageView.roundImageView()
+        selectionStyle = .none
     }
 
     func setup(user: User) {
         ibAvatarImageView.sd_setImage(with: URL(string: user.avatar ?? ""), placeholderImage: ImageResources.shared.profileAvatarMock)
         ibNameLabel.text = user.name
-        ibBalanceLabel.text = "\(user.balance ?? 0)"
+        ibBalanceLabel.text = "\(user.balance)"
         
-        if (user.balance ?? 0) > 0.0 {
+        if user.balance > 0.0 {
             ibBalanceLabel.textColor = UIColor.green
-        } else if (user.balance  ?? 0) < 0.0 {
+        } else if user.balance < 0.0 {
             ibBalanceLabel.textColor = UIColor.red
         }
     }

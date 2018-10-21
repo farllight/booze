@@ -37,12 +37,12 @@ class APIClient {
         }
     }
 
-    func registration(phone: String, completion: @escaping Completion) {
+    func registration(phone: String, name: String, completion: @escaping Completion) {
         let params = [
             "phone": phone,
             "platform": "iOS",
             "version": "1.0",
-            "name": "far__light"
+            "name": name
         ]
         baseRequest(path: "registration", method: .post, params: params, headers: ["Content-Type" : "application/json"], completion: completion)
     }
@@ -74,13 +74,14 @@ class APIClient {
         baseRequest(path: "party/\(partyId)", method: .get, params: nil, headers: ["apikey": authToken], completion: completion)
     }
     
-    func updateParty(partyId: String, party: Party, completion: @escaping Completion) {
+    func updateParty(partyId: Int, party: PartyRequestModel, completion: @escaping Completion) {
         let params: [String: Any] = [
             "id": partyId,
             "name": party.name,
             "date": party.date,
-            "users": party.users!.map({ $0.toDictionary() })  
+            "users": party.users.map({ $0.toDictionary() })   
         ]
+    
         baseRequest(path: "party/", method: .patch, params: params, headers: ["Content-Type":"application/json", "apiKey": authToken], completion: completion)
     }
     
@@ -103,5 +104,9 @@ class APIClient {
     func updateTransaction(id: String, transaction: Transaction, completion: @escaping Completion) {
         let params = transaction.toDictionaryForRequest()  
         baseRequest(path: "transaction/", method: .patch, params: params, headers: ["Content-Type": "application/json", ], completion: completion)
+    }
+    
+    func setPayment(payment: PaymentRequestModel, completion: @escaping Completion) {
+        baseRequest(path: "payment", method: .post, params: payment.toDictionary(), headers: ["Content-Type": "application/json", "apikey": authToken], completion: completion)
     }
 }

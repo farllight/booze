@@ -17,8 +17,8 @@ class DataClient {
         
     }
     
-    func registration(phone: String, completion: @escaping IsSuccessCompletion) {
-        APIClient.shared.registration(phone: phone) { (data, error)  in
+    func registration(phone: String, name: String, completion: @escaping IsSuccessCompletion) {
+        APIClient.shared.registration(phone: phone, name: name) { (data, error)  in
             if error == nil {
                 completion(true)
             } else {
@@ -108,8 +108,8 @@ class DataClient {
         }
     }
     
-    func updateParty(partyId: String, party: Party, completion: @escaping (Party?) -> Void) {
-        APIClient.shared.updateParty(partyId: partyId, party: party) { (data, error) in
+    func updateParty(partyId: Int, party: PartyRequestModel, completion: @escaping (Party?) -> Void) {
+        APIClient.shared.updateParty(partyId: partyId, party:  party) { (data, error) in
             if error != nil {
                 completion(nil)
                 return
@@ -198,6 +198,17 @@ class DataClient {
             } catch {
                 print(error)
                 completion(nil)
+            }
+        }
+    }
+    
+    func setPayment(payment: PaymentRequestModel, completion: @escaping IsSuccessCompletion) {
+        APIClient.shared.setPayment(payment: payment) { (data, error) in
+            if error != nil {
+                completion(false)
+                return
+            } else {
+                completion(true)
             }
         }
     }

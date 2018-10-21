@@ -17,6 +17,11 @@ class BoozeTransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var ibMessageLabel: UILabel!
     @IBOutlet weak var ibTargetUserAvatarImageView: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
+    
     func setup(transaction: Transaction) {
         ibUserAvatarImageView.sd_setImage(with: URL(string: transaction.user?.avatar ?? ""), placeholderImage: ImageResources.shared.profileAvatarMock)
         ibTargetUserAvatarImageView.sd_setImage(with: URL(string: transaction.targetUser?.avatar ?? ""), placeholderImage: ImageResources.shared.profileAvatarMock)

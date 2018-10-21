@@ -10,7 +10,7 @@ import UIKit
 
 protocol AddBoozeTableVieCellDelegate: class {
     func nameTextFieldEditing(text: String)
-    func dateTextFieldEditind(text: String)
+    func dateTextFieldStartEditind()
 }
 
 class AddBoozeTableViewCell: UITableViewCell {
@@ -29,12 +29,7 @@ class AddBoozeTableViewCell: UITableViewCell {
         contentView.backgroundColor = ColorResources.shared.cellProfileBackgroundColor
         ibNameTextField.delegate = self
         ibDateTextField.delegate = self
-    }
-    
-    func setupUI(model: AddBoozeTableViewCellModel) {
-        ibHeaderImageView.image = model.image
-        ibNameTextField.text = model.name
-        ibDateTextField.text = model.date.toHumanString()
+        ibHeaderImageView.backgroundColor = .gray
     }
 }
 
@@ -43,7 +38,16 @@ extension AddBoozeTableViewCell: UITextFieldDelegate {
         if textField == ibNameTextField {
             delegate?.nameTextFieldEditing(text: textField.text ?? "")
         } else if (textField == ibDateTextField) {
-            delegate?.dateTextFieldEditind(text: textField.text ?? "")
+//            delegate?.dateTextFieldEditind(text: textField.text ?? "")
         }
     }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == ibDateTextField { 
+            delegate?.dateTextFieldStartEditind()
+            return false
+        }
+        
+        return true
+    } 
 }

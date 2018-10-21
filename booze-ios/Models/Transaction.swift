@@ -17,7 +17,7 @@ struct Transaction: Codable {
     var name: String
     var type: String
     var avatar: String?
-//    var users: [User]
+    var users: [User]
     
     func toDictionaryForRequest() -> [String: Any] {
         return [

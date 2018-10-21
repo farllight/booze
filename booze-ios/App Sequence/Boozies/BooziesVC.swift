@@ -27,6 +27,11 @@ class BooziesVC: UIViewController {
         setupUI()
         loadData()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadData()
+    }
 
     // MARK: - Setup UI
     private func setupUI() {
@@ -53,7 +58,10 @@ class BooziesVC: UIViewController {
     
     // MARK: - Actions
     @objc private func addRightBarButtonItemTouched() {
-        navigationController?.pushViewController(AddBoozeVC.storyboardInstance(), animated: true)
+        let vc = AddBoozeVC.storyboardInstance()
+        vc.delegate = self
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK: - Load data
@@ -88,5 +96,11 @@ extension BooziesVC: UITableViewDelegate, UITableViewDataSource {
         vc.party = parties[indexPath.row]
         
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension BooziesVC: AddBoozeVCDelegate {
+    func addParty() {
+        loadData()
     }
 }

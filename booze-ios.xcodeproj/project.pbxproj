@@ -34,6 +34,13 @@
 		765BFE41217C5D0800FE36EA /* BoozeUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765BFE3F217C5D0800FE36EA /* BoozeUserTableViewCell.xib */; };
 		765BFE45217C6A3500FE36EA /* BoozeTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE43217C6A3500FE36EA /* BoozeTransactionTableViewCell.swift */; };
 		765BFE46217C6A3500FE36EA /* BoozeTransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765BFE44217C6A3500FE36EA /* BoozeTransactionTableViewCell.xib */; };
+		765BFE4A217CA6E600FE36EA /* AddTransaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765BFE49217CA6E600FE36EA /* AddTransaction.storyboard */; };
+		765BFE4C217CA70200FE36EA /* AddTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE4B217CA70100FE36EA /* AddTransactionVC.swift */; };
+		765BFE4E217CB21400FE36EA /* TransactionRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE4D217CB21400FE36EA /* TransactionRequestModel.swift */; };
+		765BFE50217CB46800FE36EA /* PaymentRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE4F217CB46800FE36EA /* PaymentRequestModel.swift */; };
+		765BFE52217CB98000FE36EA /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE51217CB98000FE36EA /* LoginResponseModel.swift */; };
+		765BFE55217CBE8200FE36EA /* CustomDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765BFE54217CBE8200FE36EA /* CustomDatePicker.xib */; };
+		765BFE57217CBF4900FE36EA /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE56217CBF4900FE36EA /* CustomDatePicker.swift */; };
 		76EC977B217A4CB600A50261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC977A217A4CB600A50261 /* AppDelegate.swift */; };
 		76EC9782217A4CB700A50261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9781217A4CB700A50261 /* Assets.xcassets */; };
 		76EC9785217A4CB700A50261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9783217A4CB700A50261 /* LaunchScreen.storyboard */; };
@@ -112,6 +119,13 @@
 		765BFE3F217C5D0800FE36EA /* BoozeUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoozeUserTableViewCell.xib; sourceTree = "<group>"; };
 		765BFE43217C6A3500FE36EA /* BoozeTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoozeTransactionTableViewCell.swift; sourceTree = "<group>"; };
 		765BFE44217C6A3500FE36EA /* BoozeTransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoozeTransactionTableViewCell.xib; sourceTree = "<group>"; };
+		765BFE49217CA6E600FE36EA /* AddTransaction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTransaction.storyboard; sourceTree = "<group>"; };
+		765BFE4B217CA70100FE36EA /* AddTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionVC.swift; sourceTree = "<group>"; };
+		765BFE4D217CB21400FE36EA /* TransactionRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRequestModel.swift; sourceTree = "<group>"; };
+		765BFE4F217CB46800FE36EA /* PaymentRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRequestModel.swift; sourceTree = "<group>"; };
+		765BFE51217CB98000FE36EA /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		765BFE54217CBE8200FE36EA /* CustomDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDatePicker.xib; sourceTree = "<group>"; };
+		765BFE56217CBF4900FE36EA /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		76EC9777217A4CB600A50261 /* booze-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "booze-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EC977A217A4CB600A50261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76EC9781217A4CB700A50261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -253,6 +267,7 @@
 		765BFE36217C579B00FE36EA /* Booze */ = {
 			isa = PBXGroup;
 			children = (
+				765BFE48217CA6B100FE36EA /* AddTransactionVC */,
 				765BFE42217C6A1100FE36EA /* BoozeTransactionTableViewCell */,
 				765BFE3B217C5CB700FE36EA /* BoozeUserTableViewCell */,
 				765BFE37217C57BA00FE36EA /* BoozeVC.swift */,
@@ -277,6 +292,32 @@
 				765BFE44217C6A3500FE36EA /* BoozeTransactionTableViewCell.xib */,
 			);
 			path = BoozeTransactionTableViewCell;
+			sourceTree = "<group>";
+		};
+		765BFE48217CA6B100FE36EA /* AddTransactionVC */ = {
+			isa = PBXGroup;
+			children = (
+				765BFE49217CA6E600FE36EA /* AddTransaction.storyboard */,
+				765BFE4B217CA70100FE36EA /* AddTransactionVC.swift */,
+			);
+			path = AddTransactionVC;
+			sourceTree = "<group>";
+		};
+		765BFE53217CBE0800FE36EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				765BFE58217CBF4D00FE36EA /* CustomDatePicker */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		765BFE58217CBF4D00FE36EA /* CustomDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				765BFE54217CBE8200FE36EA /* CustomDatePicker.xib */,
+				765BFE56217CBF4900FE36EA /* CustomDatePicker.swift */,
+			);
+			path = CustomDatePicker;
 			sourceTree = "<group>";
 		};
 		76EC976E217A4CB500A50261 = {
@@ -310,6 +351,7 @@
 				76EC97AC217A763F00A50261 /* Extensions */,
 				76EC9806217AD0F400A50261 /* UserSessionTracker */,
 				76EC9815217AE3FE00A50261 /* Models */,
+				765BFE53217CBE0800FE36EA /* Views */,
 				76EC97A4217A660D00A50261 /* Core */,
 				76EC978C217A4E8600A50261 /* App Sequence */,
 			);
@@ -507,6 +549,9 @@
 			children = (
 				76EC9816217AE44400A50261 /* RegistrationResponseModel.swift */,
 				765BFE34217C521C00FE36EA /* PartyRequestModel.swift */,
+				765BFE4D217CB21400FE36EA /* TransactionRequestModel.swift */,
+				765BFE4F217CB46800FE36EA /* PaymentRequestModel.swift */,
+				765BFE51217CB98000FE36EA /* LoginResponseModel.swift */,
 			);
 			path = DataClientModels;
 			sourceTree = "<group>";
@@ -627,10 +672,12 @@
 				76EC97CB217AA2A600A50261 /* CodeConformition.storyboard in Resources */,
 				76EC97E8217AA7EF00A50261 /* Roboto-Light.ttf in Resources */,
 				76EC97A2217A5DC600A50261 /* BooziesTableViewCell.xib in Resources */,
+				765BFE4A217CA6E600FE36EA /* AddTransaction.storyboard in Resources */,
 				765BFE05217B4C2200FE36EA /* AddBooze.storyboard in Resources */,
 				765BFE3A217C57C700FE36EA /* Booze.storyboard in Resources */,
 				76EC97E6217AA7EF00A50261 /* Roboto-Black.ttf in Resources */,
 				765BFE1D217B665300FE36EA /* AddBoozeInviteTableViewCell.xib in Resources */,
+				765BFE55217CBE8200FE36EA /* CustomDatePicker.xib in Resources */,
 				76EC97E2217AA7EF00A50261 /* Roboto-Regular.ttf in Resources */,
 				76EC97E3217AA7EF00A50261 /* Roboto-Bold.ttf in Resources */,
 				76EC97FC217AB41100A50261 /* ProfileTableViewCell.xib in Resources */,
@@ -657,6 +704,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/KVNProgress/KVNProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -666,6 +714,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVNProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -702,11 +751,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				765BFE57217CBF4900FE36EA /* CustomDatePicker.swift in Sources */,
 				765BFE2B217B6E9E00FE36EA /* ContactTableViewCell.swift in Sources */,
 				76EC979B217A554E00A50261 /* ProfileVC.swift in Sources */,
 				765BFE12217B577500FE36EA /* AddBoozeUserTableViewCell.swift in Sources */,
 				765BFE09217B4E3400FE36EA /* AddBoozeTableViewCell.swift in Sources */,
 				76EC9820217B033F00A50261 /* UIViewController+LogoutAlert.swift in Sources */,
+				765BFE4C217CA70200FE36EA /* AddTransactionVC.swift in Sources */,
 				765BFE03217B4A1800FE36EA /* CNContact+ToCustomContact.swift in Sources */,
 				765BFE23217B6CB800FE36EA /* ContactsVC.swift in Sources */,
 				76EC97BF217A82E700A50261 /* UIImageView+CustomRoundImageView.swift in Sources */,
@@ -714,6 +765,7 @@
 				76EC97F6217AB27200A50261 /* ProfileSwitchTableViewCell.swift in Sources */,
 				765BFE45217C6A3500FE36EA /* BoozeTransactionTableViewCell.swift in Sources */,
 				765BFE16217B61CF00FE36EA /* AddBoozeHeaderTableView.swift in Sources */,
+				765BFE4E217CB21400FE36EA /* TransactionRequestModel.swift in Sources */,
 				76EC979D217A5CB500A50261 /* ColorResources.swift in Sources */,
 				765BFE40217C5D0800FE36EA /* BoozeUserTableViewCell.swift in Sources */,
 				76EC9794217A521300A50261 /* BooziesVC.swift in Sources */,
@@ -728,6 +780,7 @@
 				765BFE2F217BB63100FE36EA /* String+DateStringToTimeStumpInt.swift in Sources */,
 				76EC9797217A54B900A50261 /* ImageResources.swift in Sources */,
 				765BFE38217C57BA00FE36EA /* BoozeVC.swift in Sources */,
+				765BFE50217CB46800FE36EA /* PaymentRequestModel.swift in Sources */,
 				76EC97F0217AAF6700A50261 /* ProfileUserTableViewCell.swift in Sources */,
 				76EC97FB217AB41100A50261 /* ProfileTableViewCell.swift in Sources */,
 				76EC97A1217A5DC600A50261 /* BooziesTableViewCell.swift in Sources */,
@@ -735,6 +788,7 @@
 				76EC97C8217A955700A50261 /* UIColor+HexColor.swift in Sources */,
 				765BFE0E217B515300FE36EA /* Date+ToHumanString.swift in Sources */,
 				765BFE0C217B50BB00FE36EA /* AddBoozeTableViewCellModel.swift in Sources */,
+				765BFE52217CB98000FE36EA /* LoginResponseModel.swift in Sources */,
 				76EC981E217AFD6C00A50261 /* AppRouter.swift in Sources */,
 				765BFE1C217B665300FE36EA /* AddBoozeInviteTableViewCell.swift in Sources */,
 				765BFE35217C521C00FE36EA /* PartyRequestModel.swift in Sources */,

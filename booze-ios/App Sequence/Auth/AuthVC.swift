@@ -15,6 +15,8 @@ class AuthVC: UIViewController {
     @IBOutlet weak var ibPhoneTextField: UITextField!
     @IBOutlet weak var ibSepatorView: UIView!
     @IBOutlet weak var ibSendCodeButton: UIButton!
+    @IBOutlet weak var ibNameTextField: UITextField!
+    @IBOutlet weak var ibSepatorNameView: UIView!
     
     // MARK: - Initialize
     static func storyboardInstance() -> AuthVC {
@@ -42,22 +44,29 @@ class AuthVC: UIViewController {
         ibDescriptionLabel.textColor = .white
         ibSepatorView.backgroundColor = ColorResources.shared.authTextFieldColor
         ibSendCodeButton.setTitleColor(.white, for: .normal)
-        
         ibPhoneTextField.keyboardType = .numberPad
         ibPhoneTextField.attributedPlaceholder = NSAttributedString(string: "Номер телефона",
                                                                     attributes: [
                                                                         NSAttributedString.Key.foregroundColor: ColorResources.shared.authTextFieldColor
             ])
+        ibNameTextField.keyboardType = .namePhonePad
+        ibNameTextField.attributedText = NSAttributedString(string: "Имя", attributes: [
+            NSAttributedString.Key.foregroundColor: ColorResources.shared.authTextFieldColor
+            ])
+        ibNameTextField.textColor = .white
+        ibSepatorNameView.backgroundColor = ColorResources.shared.authTextFieldColor
     }
+    
     
     // MARK: - Actions
     @IBAction func sendCodeButtonTouched(_ sender: UIButton) {
         KVNProgress.show()
-        DataClient.shared.registration(phone: ibPhoneTextField.text ?? "") { [weak self] (isSuccess)  in
+        DataClient.shared.registration(phone: ibPhoneTextField.text ?? "", name: ibNameTextField.text ?? "") { [weak self] (isSuccess)  in
             if isSuccess {
                 KVNProgress.dismiss()
                 let vc = CodeConformitionVC.storyboardInstance()
                 vc.phone = self?.ibPhoneTextField.text ?? ""
+                vc.name = self?.ibNameTextField.text ?? ""
                 self?.navigationController?.pushViewController(vc, animated: true)
             } else {
                 KVNProgress.showError()

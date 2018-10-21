@@ -28,6 +28,7 @@ class ProfileSwitchTableViewCell: UITableViewCell {
         contentView.backgroundColor = ColorResources.shared.cellProfileBackgroundColor
         ibTopBorderView.backgroundColor = ColorResources.shared.cellProfileBorderColor
         ibBottomBorderView.backgroundColor = ColorResources.shared.cellProfileBorderColor
+        selectionStyle = .none
     }
     
     func setup(delegate: ProfileSwitchTableViewCellDelegate, isOn: Bool) {

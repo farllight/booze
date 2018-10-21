@@ -20,12 +20,13 @@ class BooziesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         accessoryType = .disclosureIndicator
+        selectionStyle = .none
         boozeImageView.roundImageView()
     }
     
     func setupUI(party: Party) {
         boozeNameLabel.text = party.name
-        ibCountOfUsersLabel.text = party.users!.countInHumanString()
+        ibCountOfUsersLabel.text = party.users.countInHumanString()
         boozeDateLabel.text = party.date.timeStumpToHumanDate()
     }
 }
