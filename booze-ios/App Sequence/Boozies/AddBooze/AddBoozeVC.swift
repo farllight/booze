@@ -14,7 +14,7 @@ protocol AddBoozeVCDelegate: class {
     func addParty()
 }
 
-class AddBoozeVC: UIViewController {
+class AddBoozeVC: UIViewController { 
     @IBOutlet weak var ibAddBoozeTableView: UITableView!
     
     private var customPatePicker = CustomDatePicker.xibInstance()
@@ -26,6 +26,7 @@ class AddBoozeVC: UIViewController {
     private var date = 0
     
     weak var delegate: AddBoozeVCDelegate?
+    weak var calendarDelegate: CustomDatePickerDelegate?
     
     // MARK: - Initialize
     static func storyboardInstance() -> AddBoozeVC {
@@ -121,13 +122,14 @@ extension AddBoozeVC: UITableViewDelegate, UITableViewDataSource {
         if section == 1 {
             return 84
         }
-        
+
         return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: AddBoozeTableViewCell.reuseId, for: indexPath) as! AddBoozeTableViewCell
+            calendarDelegate = cell
             cell.delegate = self
             return cell
         } else if indexPath.section == 1 && indexPath.row == 0 {
@@ -164,7 +166,7 @@ extension AddBoozeVC: ContactVCDelegate {
 extension AddBoozeVC: AddBoozeTableVieCellDelegate {
     func dateTextFieldStartEditind() {
         view.addSubview(customPatePicker)
-        
+        tabBarController?.tabBar.isHidden = true
     }
     
     func nameTextFieldEditing(text: String) {
@@ -174,12 +176,17 @@ extension AddBoozeVC: AddBoozeTableVieCellDelegate {
 
 extension AddBoozeVC: CustomDatePickerDelegate {
     func cancelButtonTuched() {
-        customPatePicker.removeFromSuperview()
-        tabBarController?.tabBar.isHidden = false
+        hideCustomCalendar()
     }
     
     func readyButtonTouched(date: Date) {
-        // TODO: - send date with delegate
+        hideCustomCalendar()
+        self.date = Int(date.timeIntervalSince1970)
+        calendarDelegate?.readyButtonTouched(date: date)
+    }
+    
+    private func hideCustomCalendar() {
         customPatePicker.removeFromSuperview()
+        tabBarController?.tabBar.isHidden = false
     }
 }

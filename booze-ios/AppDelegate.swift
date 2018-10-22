@@ -16,16 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         if UserSessionTracker.shared.isAuth() {
-            window?.rootViewController = MainTabBarController()
+            AppRouter.shared.replaceRootViewController(viewController: MainTabBarController())
         } else {
-            window?.rootViewController = UINavigationController(rootViewController: AuthVC.storyboardInstance())
-        } 
+            AppRouter.shared.replaceRootViewController(viewController: UINavigationController(rootViewController: AuthVC.storyboardInstance()))
+        }
 
         return true 
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let   tokenString = deviceToken.reduce("", {$0 + String(format: "%02X",    $1)})
+        let  tokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
         print("deviceToken: \(tokenString)")
     }
 }

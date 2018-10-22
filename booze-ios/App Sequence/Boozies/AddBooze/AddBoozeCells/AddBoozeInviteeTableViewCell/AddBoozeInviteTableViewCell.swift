@@ -23,6 +23,7 @@ class AddBoozeInviteTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         contentView.backgroundColor = ColorResources.shared.cellProfileBackgroundColor
+        selectionStyle = .none
     }
     
     // MARK: - Actions

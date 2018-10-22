@@ -45,14 +45,13 @@ class AuthVC: UIViewController {
         ibSepatorView.backgroundColor = ColorResources.shared.authTextFieldColor
         ibSendCodeButton.setTitleColor(.white, for: .normal)
         ibPhoneTextField.keyboardType = .numberPad
-        ibPhoneTextField.attributedPlaceholder = NSAttributedString(string: "Номер телефона",
-                                                                    attributes: [
-                                                                        NSAttributedString.Key.foregroundColor: ColorResources.shared.authTextFieldColor
-            ])
-        ibNameTextField.keyboardType = .namePhonePad
-        ibNameTextField.attributedText = NSAttributedString(string: "Имя", attributes: [
+        ibPhoneTextField.attributedPlaceholder = NSAttributedString(string: "Номер телефона", attributes: [
             NSAttributedString.Key.foregroundColor: ColorResources.shared.authTextFieldColor
-            ])
+        ])
+        ibNameTextField.keyboardType = .namePhonePad
+        ibNameTextField.attributedPlaceholder = NSAttributedString(string: "Имя", attributes: [
+            NSAttributedString.Key.foregroundColor: ColorResources.shared.authTextFieldColor
+        ])
         ibNameTextField.textColor = .white
         ibSepatorNameView.backgroundColor = ColorResources.shared.authTextFieldColor
     }

@@ -12,19 +12,19 @@ struct User: Codable {
     var wasted: Int
     var id: Int
     var surname: String?
-    var name: String?
-    var parties: [Party]?
+    var name: String
+    var parties: [PartyResponseModel]
     var avatar: String?
     var balance: Double
     var phone: String
-    var transactions: [Transaction]?
+    var transactions: [Transaction]
     
     func toDictionary() -> [String: Any] {
         return [
             "id": id,
             "surname": surname as Any,
-            "name": name! as Any,
-            "parties": parties!.map({ $0.toDictionary() }),
+            "name": name as Any,
+            "parties": parties.map({ $0.toDictionary() }),
             "avatar": avatar as Any,
             "balance": balance as Any
         ]
@@ -35,7 +35,7 @@ struct User: Codable {
     }
     
     func fullName() -> String {
-        return "\(name ?? "") \(surname ?? "")"
+        return "\(name) \(surname ?? "")"
     }
     
     static func empty() -> User {

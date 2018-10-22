@@ -105,7 +105,7 @@ extension BoozeVC: UITableViewDelegate, UITableViewDataSource {
         case .users:
             numberOfRows = party.users.count
         case .history:
-            numberOfRows = party.transactions!.count
+            numberOfRows = party.transactions.count
         }
         
         return numberOfRows
@@ -119,7 +119,7 @@ extension BoozeVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .history:
             let cell = tableView.dequeueReusableCell(withIdentifier: BoozeTransactionTableViewCell.reuseId, for: indexPath) as! BoozeTransactionTableViewCell
-            cell.setup(transaction: party.transactions![indexPath.row])
+            cell.setup(transaction: party.transactions[indexPath.row])
             
             return cell
         }

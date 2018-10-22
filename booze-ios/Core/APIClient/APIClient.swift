@@ -67,7 +67,7 @@ class APIClient {
     }
     
     func getAllParties(completion: @escaping Completion) {
-        baseRequest(path: "party/", method: .get, params: nil, headers: ["apikey": authToken], completion: completion)
+        baseRequest(path: "party", method: .get, params: nil, headers: ["apikey": authToken], completion: completion)
     }
     
     func getParty(partyId: String, completion: @escaping Completion) {
@@ -82,7 +82,7 @@ class APIClient {
             "users": party.users.map({ $0.toDictionary() })   
         ]
     
-        baseRequest(path: "party/", method: .patch, params: params, headers: ["Content-Type":"application/json", "apiKey": authToken], completion: completion)
+        baseRequest(path: "party/", method: .patch, params: params, headers: ["Content-Type": "application/json", "apikey": authToken], completion: completion)
     }
     
     func getAllUsers(completion: @escaping Completion) {
@@ -107,6 +107,6 @@ class APIClient {
     }
     
     func setPayment(payment: PaymentRequestModel, completion: @escaping Completion) {
-        baseRequest(path: "payment", method: .post, params: payment.toDictionary(), headers: ["Content-Type": "application/json", "apikey": authToken], completion: completion)
+        baseRequest(path: "transaction/payment", method: .post, params: payment.toDictionary(), headers: ["Content-Type": "application/json", "apikey": authToken], completion: completion)
     }
 }

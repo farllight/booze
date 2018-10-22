@@ -41,6 +41,7 @@
 		765BFE52217CB98000FE36EA /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE51217CB98000FE36EA /* LoginResponseModel.swift */; };
 		765BFE55217CBE8200FE36EA /* CustomDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765BFE54217CBE8200FE36EA /* CustomDatePicker.xib */; };
 		765BFE57217CBF4900FE36EA /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765BFE56217CBF4900FE36EA /* CustomDatePicker.swift */; };
+		76BB109C217E67BD004962F0 /* PartyResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BB109B217E67BD004962F0 /* PartyResponseModel.swift */; };
 		76EC977B217A4CB600A50261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC977A217A4CB600A50261 /* AppDelegate.swift */; };
 		76EC9782217A4CB700A50261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9781217A4CB700A50261 /* Assets.xcassets */; };
 		76EC9785217A4CB700A50261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC9783217A4CB700A50261 /* LaunchScreen.storyboard */; };
@@ -126,6 +127,7 @@
 		765BFE51217CB98000FE36EA /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
 		765BFE54217CBE8200FE36EA /* CustomDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDatePicker.xib; sourceTree = "<group>"; };
 		765BFE56217CBF4900FE36EA /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		76BB109B217E67BD004962F0 /* PartyResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyResponseModel.swift; sourceTree = "<group>"; };
 		76EC9777217A4CB600A50261 /* booze-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "booze-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EC977A217A4CB600A50261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76EC9781217A4CB700A50261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 				765BFE4D217CB21400FE36EA /* TransactionRequestModel.swift */,
 				765BFE4F217CB46800FE36EA /* PaymentRequestModel.swift */,
 				765BFE51217CB98000FE36EA /* LoginResponseModel.swift */,
+				76BB109B217E67BD004962F0 /* PartyResponseModel.swift */,
 			);
 			path = DataClientModels;
 			sourceTree = "<group>";
@@ -702,7 +705,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-booze-ios/Pods-booze-ios-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/KVNProgress/KVNProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -712,7 +714,6 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVNProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -798,6 +799,7 @@
 				76EC977B217A4CB600A50261 /* AppDelegate.swift in Sources */,
 				76EC9808217AD10C00A50261 /* UserSessionTracker.swift in Sources */,
 				76EC9819217AED7000A50261 /* Party.swift in Sources */,
+				76BB109C217E67BD004962F0 /* PartyResponseModel.swift in Sources */,
 				76EC9802217AB8DD00A50261 /* ProfileExitTableViewCell.swift in Sources */,
 				765BFE31217BD58E00FE36EA /* Transaction.swift in Sources */,
 				76EC9822217B216800A50261 /* Array+CountToHumanString.swift in Sources */,

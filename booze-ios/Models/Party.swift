@@ -10,17 +10,19 @@ import UIKit
 
 struct Party: Codable {
     var id: Int
+    var avatar: String?
+    var balance: Int
     var name: String
     var date: Int
     var users: [User]
-    var transactions: [Transaction]?
+    var transactions: [Transaction]
     
     func toDictionary() -> [String: Any] {
         return [
             "name": name,
             "date": date,
             "users": users.map({ $0.toDictionary() }),
-            "tranactions": transactions!.map({ $0.toDictionaryForRequest() })
+            "tranactions": transactions.map({ $0.toDictionaryForRequest() })
         ]
     }
     
@@ -29,6 +31,6 @@ struct Party: Codable {
     }
     
     static func empty() -> Party {
-        return Party(id: 0, name: "", date: 0, users: [], transactions: []) 
+        return Party(id: 0, avatar: "", balance: 0, name: "", date: 0, users: [], transactions: [])
     }
 }

@@ -20,10 +20,11 @@ class AddBoozeUserTableViewCell: UITableViewCell {
         super.awakeFromNib()
         ibUserAvatar.roundImageView()
         contentView.backgroundColor = ColorResources.shared.cellProfileBackgroundColor
+        selectionStyle = .none
     } 
     
     func setup(user: User) {
-        ibNameLabel.text = user.name ?? ""
+        ibNameLabel.text = user.name
     }
     
     

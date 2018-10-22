@@ -25,6 +25,7 @@ class AddBoozeTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
         ibHeaderImageView.roundImageView()
         contentView.backgroundColor = ColorResources.shared.cellProfileBackgroundColor
         ibNameTextField.delegate = self
@@ -37,8 +38,6 @@ extension AddBoozeTableViewCell: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == ibNameTextField {
             delegate?.nameTextFieldEditing(text: textField.text ?? "")
-        } else if (textField == ibDateTextField) {
-//            delegate?.dateTextFieldEditind(text: textField.text ?? "")
         }
     }
     
@@ -50,4 +49,14 @@ extension AddBoozeTableViewCell: UITextFieldDelegate {
         
         return true
     } 
+}
+
+extension AddBoozeTableViewCell: CustomDatePickerDelegate {
+    func cancelButtonTuched() {
+        
+    }
+    
+    func readyButtonTouched(date: Date) {
+        ibDateTextField.text = date.toHumanString()
+    }
 }
